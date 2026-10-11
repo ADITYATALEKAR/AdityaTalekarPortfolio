@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EnergyNexus — deep-learning energy forecasting (MSc dissertation) — Aditya Talekar</title>
+  <meta name="description" content="Case study: EnergyNexus, an MSc dissertation at Queen Mary University of London forecasting energy demand, electricity price and wind generation with CNN-BiLSTM-attention and wavelet-LSTM models.">
+  <meta name="author" content="Aditya Talekar">
+  <link rel="canonical" href="https://adityatalekar.github.io/work/energynexus.html">
+  <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="EnergyNexus — deep-learning energy forecasting (MSc dissertation) — Aditya Talekar">
+  <meta property="og:description" content="Case study: EnergyNexus, an MSc dissertation at Queen Mary University of London forecasting energy demand, electricity price and wind generation with CNN-BiLSTM-attention and wavelet-LSTM models.">
+  <meta property="og:url" content="https://adityatalekar.github.io/work/energynexus.html">
+  <meta property="og:image" content="https://adityatalekar.github.io/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-base="../">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html" aria-label="Aditya Talekar — home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">Aditya Talekar <span>· AI Engineer</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#teaching">Teaching</a>
+      <a href="../index.html#lab">Lab</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="cmdk-btn" data-cmdk aria-label="Open command menu">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="label">Search</span><kbd><span data-mod>Ctrl</span> K</kbd>
+      </button>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle colour theme">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <article>
+    <header class="cs-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span aria-hidden="true">/</span><span>EnergyNexus</span></nav>
+        <h1 class="cs-title">Energy<em>Nexus</em></h1>
+        <p class="cs-sub">Forecasting energy demand, electricity price and wind generation with deep learning — my MSc dissertation at Queen Mary University of London.</p>
+        <dl class="cs-facts">
+          <div><dt>Context</dt><dd>MSc Data Science &amp; AI dissertation<br>Graduated with Distinction</dd></div>
+          <div><dt>Timeline</dt><dd>Summer 2025</dd></div>
+          <div><dt>Stack</dt><dd>Python · TensorFlow/Keras · PyWavelets · pandas · SQL</dd></div>
+          <div><dt>Links</dt><dd><a href="https://github.com/ADITYATALEKAR/EnergyNexusu" target="_blank" rel="noopener">Notebooks on GitHub ↗</a></dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="wrap cs-body" style="padding-top: 0">
+      <aside class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#data">Data</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </ol>
+      </aside>
+
+      <div class="prose">
+        <section id="overview">
+          <h2><span class="n">01 — Overview</span>Three forecasting problems, one transferable architecture.</h2>
+          <p>Grid operators balance supply and demand hour by hour, and renewables make both sides harder to predict. EnergyNexus builds three forecasters — <strong>demand</strong>, <strong>electricity price</strong> and <strong>wind generation</strong> — at 1, 6 and 24-hour horizons, and asks whether an architecture designed for one target transfers to another.</p>
+          <div class="stat-grid">
+            <div class="stat accent"><b>95.9%</b><span>R² · energy demand (overall)</span></div>
+            <div class="stat"><b>93.1%</b><span>R² · wind generation (test)</span></div>
+            <div class="stat"><b>70.3%</b><span>R² · electricity price (overall)</span></div>
+          </div>
+        </section>
+
+        <section id="data">
+          <h2><span class="n">02 — Data</span>Two very different sources.</h2>
+          <table class="stack-table">
+            <tr><th>Demand &amp; price</th><td>A large synthetic London dataset — 1.05M hourly rows × 125 features across 10 years and 12 boroughs, generated to mirror real demand drivers (weather, calendar, economic and grid signals). Each model trains on a continuous 50,000-hour window with a chronological 70/20/10 split.</td></tr>
+            <tr><th>Wind</th><td>Real German renewable-generation data from Open Power System Data (ENTSO-E), hourly for 2016 — wind speeds at several heights and surface roughness as inputs.</td></tr>
+          </table>
+        </section>
+
+        <section id="models">
+          <h2><span class="n">03 — Models</span>Multi-scale convolution, memory and attention.</h2>
+          <div class="diagram-wrap wide" role="img" aria-label="Demand model architecture: 24-hour input with 63 features, three parallel 1D convolutions with kernel sizes 3, 7 and 15, concatenated into bidirectional LSTM 112, bidirectional LSTM 84, LSTM 112, six-head attention with residual, then pooled and dense layers to three horizon outputs.">
+            <svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="ena" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker></defs>
+              <rect x="20" y="112" width="130" height="76" rx="12" class="d-box"/><text x="36" y="140" class="d-title">Input</text><text x="36" y="160" class="d-text">24 h × 63</text><text x="36" y="176" class="d-text">features</text>
+              <rect x="190" y="40" width="150" height="56" rx="12" class="d-box"/><text x="206" y="64" class="d-title">Conv1D k=3</text><text x="206" y="83" class="d-text">48 · BN · drop</text>
+              <rect x="190" y="122" width="150" height="56" rx="12" class="d-box"/><text x="206" y="146" class="d-title">Conv1D k=7</text><text x="206" y="165" class="d-text">48 · BN · drop</text>
+              <rect x="190" y="204" width="150" height="56" rx="12" class="d-box"/><text x="206" y="228" class="d-title">Conv1D k=15</text><text x="206" y="247" class="d-text">48 · BN · drop</text>
+              <path d="M150 150H170V68H188M170 150H188M170 150V232H188" class="d-edge" marker-end="url(#ena)"/>
+              <rect x="380" y="96" width="170" height="108" rx="12" class="d-box"/><text x="396" y="122" class="d-title">Recurrent stack</text><text x="396" y="146" class="d-text">BiLSTM 112 + LN</text><text x="396" y="164" class="d-text">BiLSTM 84 + LN</text><text x="396" y="182" class="d-text">LSTM 112 + LN</text>
+              <path d="M340 68H360V150H378M340 150H378M340 232H360V150" class="d-edge" marker-end="url(#ena)"/>
+              <rect x="590" y="112" width="160" height="76" rx="12" class="d-box-accent"/><text x="606" y="140" class="d-title">Attention</text><text x="606" y="160" class="d-text">6 heads · residual</text><text x="606" y="176" class="d-text">key dim 56</text>
+              <path d="M550 150h38" class="d-edge" marker-end="url(#ena)"/>
+              <rect x="790" y="96" width="150" height="108" rx="12" class="d-box-signal"/><text x="806" y="122" class="d-title">Heads</text><text x="806" y="146" class="d-text">avg + max pool</text><text x="806" y="164" class="d-text">dense 128 → 64</text><text x="806" y="182" class="d-text">→ 1h · 6h · 24h</text>
+              <path d="M750 150h38" class="d-edge" marker-end="url(#ena)"/>
+            </svg>
+          </div>
+          <p class="diagram-cap">The demand network (830,963 parameters). Parallel kernels see short, medium and daily-scale patterns at once.</p>
+          <div class="decisions">
+            <div class="decision"><span class="n">01</span><div><h4>Demand — CNN + BiLSTM + attention</h4><p>Three parallel convolutions (kernels 3, 7 and 15) capture patterns at different time scales; stacked bidirectional LSTMs model sequence; multi-head attention lets the network weigh the hours that matter. Trained with Huber loss, gradient clipping, early stopping and learning-rate decay.</p></div></div>
+            <div class="decision"><span class="n">02</span><div><h4>Price — transfer the architecture</h4><p>Electricity price is far noisier than demand. I reused the demand architecture with heavier dropout and a blended Huber + MAE loss to test whether its inductive biases transfer.</p></div></div>
+            <div class="decision"><span class="n">03</span><div><h4>Wind — wavelets, then a lean LSTM</h4><p>Wind is non-stationary and spiky. A Daubechies-3 wavelet decomposition separates the signal into frequency bands before a compact two-layer LSTM (54K parameters) — small model, clean features.</p></div></div>
+          </div>
+        </section>
+
+        <section id="results">
+          <h2><span class="n">04 — Results</span>Strong on demand and wind; price is hard.</h2>
+          <figure class="chart" data-chart='{"title":"R² by forecast horizon","subtitle":"Held-out test windows · higher is better","xLabel":"Horizon","unit":"%","max":100,"categories":["1 hour","6 hours","24 hours"],"series":[{"name":"Demand","values":[95.7,96.8,95.1]},{"name":"Price","values":[69.7,69.8,71.3]}]}'>
+            <noscript><p>Demand R²: 95.7% (1h), 96.8% (6h), 95.1% (24h). Price R²: 69.7%, 69.8%, 71.3%.</p></noscript>
+          </figure>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead><tr><th>Model</th><th>Horizon</th><th>R²</th><th>MAE</th><th>RMSE</th></tr></thead>
+              <tbody>
+                <tr><td>Demand</td><td>1 h</td><td>0.957</td><td>2,754 MW</td><td>3,467 MW</td></tr>
+                <tr><td>Demand</td><td>6 h</td><td>0.968</td><td>2,432 MW</td><td>2,996 MW</td></tr>
+                <tr><td>Demand</td><td>24 h</td><td>0.951</td><td>2,990 MW</td><td>3,689 MW</td></tr>
+                <tr><td>Price</td><td>1 h</td><td>0.697</td><td>£8.11/MWh</td><td>£10.22</td></tr>
+                <tr><td>Price</td><td>24 h</td><td>0.713</td><td>£7.94/MWh</td><td>£9.97</td></tr>
+                <tr class="total"><td>Wind (wavelet-LSTM)</td><td>test, n = 1,307</td><td>0.931</td><td>1,754 MW</td><td>2,273 MW</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Demand MAPE stayed around 4% at 1 and 6 hours. The wind model reached an index of agreement of 0.983 and a Pearson correlation of 0.967 against actual generation.</p>
+          <div class="gallery">
+            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-demand.webp" alt="Demand model training and validation loss and MAE curves, and R² by horizon bars at 95.7, 96.8 and 95.1 percent" loading="lazy" width="1487" height="985"></div><figcaption><b>A</b>Demand: convergence and accuracy by horizon.</figcaption></figure>
+            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-price.webp" alt="Price model loss and MAE curves and R² by horizon, all around 70 percent" loading="lazy" width="1189" height="789"></div><figcaption><b>B</b>Price: the transferred architecture reaches ~70% R².</figcaption></figure>
+            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-wind-diagnostics.webp" alt="Wind model diagnostics: predicted vs actual scatter, residuals, residual distribution, Q-Q plot, time-series comparison and training history" loading="lazy" width="1790" height="1180"></div><figcaption><b>C</b>Wind: six-panel diagnostic of the wavelet-LSTM.</figcaption></figure>
+            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-wind-2016.webp" alt="Predicted versus actual German wind generation through 2016 with train, validation and test periods" loading="lazy" width="595" height="455"></div><figcaption><b>D</b>Wind: predictions across 2016, test period in black.</figcaption></figure>
+          </div>
+        </section>
+
+        <section id="reflection">
+          <h2><span class="n">05 — Reflection</span>What I'd do differently today.</h2>
+          <p>Good research is honest about its limits. With the hindsight of a year in production AI, I'd change four things:</p>
+          <ul>
+            <li><strong>Validate on real London data.</strong> The synthetic dataset made fast iteration possible, but real smart-meter data is the true test of the demand and price models.</li>
+            <li><strong>Forecast wind from history.</strong> The wind model maps same-hour weather to generation — effectively nowcasting. A true forecast should use only past observations or weather forecasts.</li>
+            <li><strong>Fit scalers on training data only</strong> and reuse them on validation and test, to rule out any leakage.</li>
+            <li><strong>Report baselines</strong> — persistence, seasonal-naive and gradient boosting — so every R² has a reference point.</li>
+          </ul>
+          <div class="callout"><span class="k">Takeaway</span><p>Architecture transfer is real — the demand network carried to price with minimal changes — but the data and the evaluation protocol decide whether a number means anything. That lesson shaped everything I've built since.</p></div>
+        </section>
+      </div>
+    </div>
+  </article>
+  <div class="wrap">
+    <a class="next-proj" href="wave-engine.html">
+      <span class="k">Next case study</span>
+      <span class="t">Wave Engine<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Aditya Talekar · <a href="../index.html">Home</a> · <a href="mailto:aditya.a.talekar@gmail.com">aditya.a.talekar@gmail.com</a></span>
+    <span>Press <kbd><span data-mod>Ctrl</span> K</kbd> to jump anywhere · <kbd>T</kbd> to switch theme</span>
+  </div>
+</footer>
+
+<div class="cmdk" role="dialog" aria-modal="true" aria-label="Command menu">
+  <div class="cmdk-panel">
+    <div class="cmdk-input">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" placeholder="Search pages, projects, actions…" aria-label="Search" role="combobox" aria-expanded="true" aria-controls="cmdk-list" autocomplete="off" spellcheck="false">
+    </div>
+    <ul class="cmdk-list" id="cmdk-list" role="listbox"></ul>
+    <div class="cmdk-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
