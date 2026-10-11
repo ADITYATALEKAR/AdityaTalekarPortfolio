@@ -62,11 +62,12 @@
         <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span aria-hidden="true">/</span><span>EnergyNexus</span></nav>
         <h1 class="cs-title">Energy<em>Nexus</em></h1>
         <p class="cs-sub">Forecasting energy demand, electricity price and wind generation with deep learning — my MSc dissertation at Queen Mary University of London.</p>
+        <p class="muted" style="margin-top:14px;font-size:15px;max-width:760px"><em>“A Comprehensive Study of LSTM-Based Energy Demand, Energy Price, and Wind Energy Generation Prediction”</em></p>
         <dl class="cs-facts">
           <div><dt>Context</dt><dd>MSc Data Science &amp; AI dissertation<br>Graduated with Distinction</dd></div>
           <div><dt>Timeline</dt><dd>Summer 2025</dd></div>
           <div><dt>Stack</dt><dd>Python · TensorFlow/Keras · PyWavelets · pandas · SQL</dd></div>
-          <div><dt>Links</dt><dd><a href="https://github.com/ADITYATALEKAR/EnergyNexusu" target="_blank" rel="noopener">Notebooks on GitHub ↗</a></dd></div>
+          <div><dt>Links</dt><dd><a href="../assets/docs/Aditya_Talekar_MSc_Dissertation.pdf" target="_blank" rel="noopener">Read the dissertation (PDF) ↗</a><br><a href="https://github.com/ADITYATALEKAR/EnergyNexusu" target="_blank" rel="noopener">Notebooks on GitHub ↗</a></dd></div>
         </dl>
       </div>
     </header>
@@ -92,13 +93,33 @@
             <div class="stat"><b>93.1%</b><span>R² · wind generation (test)</span></div>
             <div class="stat"><b>70.3%</b><span>R² · electricity price (overall)</span></div>
           </div>
+          <h3>Objectives vs. outcomes</h3>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead><tr><th>Objective</th><th>Target</th><th>Outcome</th></tr></thead>
+              <tbody>
+                <tr><td>Demand forecasting at 1, 6 and 24 h</td><td>≥ 90% R²</td><td>95.9% R² — met</td></tr>
+                <tr><td>Wavelet-enhanced wind forecasting</td><td>&gt; 80% R²</td><td>93.08% R² — met</td></tr>
+                <tr><td>Transfer the demand architecture to price</td><td>Show it generalises</td><td>70.3% R² on a volatile target</td></tr>
+                <tr><td>London-scale synthetic dataset</td><td>Train without restricted data</td><td>1,051,200 records × 125 features</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="data">
-          <h2><span class="n">02 — Data</span>Two very different sources.</h2>
+          <h2><span class="n">02 — Data</span>When the data is locked away, build it.</h2>
+          <p>Detailed city-scale energy data sits behind government restrictions, privacy rules and corporate confidentiality. Rather than settle for fragments, I <strong>designed a synthetic data generator modelled on London</strong> — 9.5 million people, 22 GW peak demand, 3.5 GW of renewable capacity — and paired it with real German renewable data for the wind model.</p>
+          <h3>The synthetic London generator</h3>
+          <div class="decisions">
+            <div class="decision"><span class="n">01</span><div><h4>Weather that behaves like weather</h4><p>Seasonal and daily temperature cycles with autoregressive persistence (T<sub>t</sub> = 0.95·T<sub>t−1</sub> + noise); wind speed and solar irradiance with their own seasonal and diurnal shapes.</p></div></div>
+            <div class="decision"><span class="n">02</span><div><h4>Physically grounded generation</h4><p>Wind follows a turbine power curve (cut-in, rated and cut-out speeds, cubic in between); solar output is de-rated for heat and for panel degradation over ten years.</p></div></div>
+            <div class="decision"><span class="n">03</span><div><h4>Six demand sectors</h4><p>Residential, commercial, industrial, transport, public services and street lighting, shaped by an hourly profile plus heating and cooling load — then expanded across 12 boroughs with their own characteristics (87,600 → 1,051,200 rows).</p></div></div>
+            <div class="decision"><span class="n">04</span><div><h4>A price-formation model</h4><p>Price = base £45/MWh + demand pressure + renewable share + time-of-day + gas + carbon + volatility — producing a realistic 26.4% coefficient of variation.</p></div></div>
+          </div>
           <table class="stack-table">
-            <tr><th>Demand &amp; price</th><td>A large synthetic London dataset — 1.05M hourly rows × 125 features across 10 years and 12 boroughs, generated to mirror real demand drivers (weather, calendar, economic and grid signals). Each model trains on a continuous 50,000-hour window with a chronological 70/20/10 split.</td></tr>
-            <tr><th>Wind</th><td>Real German renewable-generation data from Open Power System Data (ENTSO-E), hourly for 2016 — wind speeds at several heights and surface roughness as inputs.</td></tr>
+            <tr><th>Synthetic London</th><td>10 years hourly (2014–2023), 12 boroughs, 125 engineered features: 27 lags (1–168 h), 36 rolling windows, 15 economic, 18 weather, 11 demand-sector, 6 momentum and 12 temporal encodings. Each model trains on a continuous 50,000-hour window with a chronological 70/20/10 split.</td></tr>
+            <tr><th>German wind</th><td>Real 2016 hourly data — 8,711 records from Open Power System Data plus a 256-station weather network, with wind speed at 2 m, 10 m and 50 m and surface roughness as inputs.</td></tr>
           </table>
         </section>
 
@@ -146,7 +167,8 @@
               </tbody>
             </table>
           </div>
-          <p>Demand MAPE stayed around 4% at 1 and 6 hours. The wind model reached an index of agreement of 0.983 and a Pearson correlation of 0.967 against actual generation.</p>
+          <p>Demand MAPE stayed between 3.9% and 4.6% across horizons — the 6-hour horizon was strongest, which suits medium-term grid planning. The wind model reached an index of agreement of 0.983 and a median absolute error of 1,431 MW.</p>
+          <div class="callout"><span class="k">Error analysis</span><p>The worst 5% of wind predictions (66 cases) cluster in high-wind periods, where the model <strong>over-estimates by ~15.5%</strong> on average — a systematic bias that post-processing calibration could correct. Finding the failure mode mattered more than the headline R².</p></div>
           <div class="gallery">
             <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-demand.webp" alt="Demand model training and validation loss and MAE curves, and R² by horizon bars at 95.7, 96.8 and 95.1 percent" loading="lazy" width="1487" height="985"></div><figcaption><b>A</b>Demand: convergence and accuracy by horizon.</figcaption></figure>
             <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-price.webp" alt="Price model loss and MAE curves and R² by horizon, all around 70 percent" loading="lazy" width="1189" height="789"></div><figcaption><b>B</b>Price: the transferred architecture reaches ~70% R².</figcaption></figure>
@@ -156,13 +178,13 @@
         </section>
 
         <section id="reflection">
-          <h2><span class="n">05 — Reflection</span>What I'd do differently today.</h2>
-          <p>Good research is honest about its limits. With the hindsight of a year in production AI, I'd change four things:</p>
+          <h2><span class="n">05 — Reflection</span>Limits, and what comes next.</h2>
+          <p>The dissertation is explicit about its limits: the London models are validated on synthetic data, and the wind model's residuals are autocorrelated (Durbin-Watson 0.057), suggesting that wavelet preprocessing can disrupt the temporal patterns an LSTM relies on. With the hindsight of a year building production AI, I'd add:</p>
           <ul>
-            <li><strong>Validate on real London data.</strong> The synthetic dataset made fast iteration possible, but real smart-meter data is the true test of the demand and price models.</li>
-            <li><strong>Forecast wind from history.</strong> The wind model maps same-hour weather to generation — effectively nowcasting. A true forecast should use only past observations or weather forecasts.</li>
-            <li><strong>Fit scalers on training data only</strong> and reuse them on validation and test, to rule out any leakage.</li>
-            <li><strong>Report baselines</strong> — persistence, seasonal-naive and gradient boosting — so every R² has a reference point.</li>
+            <li><strong>Real-world validation</strong> through a utility or grid-operator partnership — and use it to calibrate the synthetic generator itself.</li>
+            <li><strong>Probabilistic forecasts</strong> — prediction intervals, not just point estimates, especially for wind extremes.</li>
+            <li><strong>Forecast wind from history.</strong> The current model maps same-hour weather to generation; a true forecast should use only past observations or weather forecasts.</li>
+            <li><strong>Baselines on every chart</strong> — persistence, seasonal-naive and gradient boosting — so every R² has a reference point.</li>
           </ul>
           <div class="callout"><span class="k">Takeaway</span><p>Architecture transfer is real — the demand network carried to price with minimal changes — but the data and the evaluation protocol decide whether a number means anything. That lesson shaped everything I've built since.</p></div>
         </section>
@@ -179,7 +201,7 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <span>© 2026 Aditya Talekar · <a href="../index.html">Home</a> · <a href="mailto:aditya.a.talekar@gmail.com">aditya.a.talekar@gmail.com</a></span>
+    <span>© 2026 Aditya Talekar · <a href="../index.html">Home</a> · <a href="mailto:aditya.a.talekar@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/aditya-talekar-48731532a/" target="_blank" rel="noopener">LinkedIn</a> · <a href="../assets/docs/Aditya_Talekar_Resume.pdf" target="_blank" rel="noopener">Résumé</a></span>
     <span>Press <kbd><span data-mod>Ctrl</span> K</kbd> to jump anywhere · <kbd>T</kbd> to switch theme</span>
   </div>
 </footer>
