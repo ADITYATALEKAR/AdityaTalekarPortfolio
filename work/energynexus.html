@@ -24,6 +24,18 @@
 </head>
 <body data-base="../">
 <a class="skip" href="#main">Skip to content</a>
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Kolhapur, India · IST (UTC+5:30)</div>
+    <div class="topbar-right">
+      <a href="mailto:aditya.a.talekar@gmail.com" aria-label="Email aditya.a.talekar@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="lbl">aditya.a.talekar@gmail.com</span></a>
+      <a href="tel:+919673904714" aria-label="Call +91 96739 04714"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">+91 96739 04714</span></a>
+      <a href="https://www.linkedin.com/in/aditya-talekar-48731532a/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span class="lbl">LinkedIn</span></a>
+      <a href="https://github.com/ADITYATALEKAR" target="_blank" rel="noopener" aria-label="GitHub profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.3-2.5-1-3.5.3-1.2.3-2.4 0-3.5 0 0-1 0-3 1.5a10.6 10.6 0 0 0-8 0C6 2 5 2 5 2c-.3 1.2-.3 2.4 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.4.5-.7 1-.9 1.7-.2.6-.2 1.2-.1 1.8v4"/><path d="M9 18c-4.5 2-5-2-7-2"/></svg><span class="lbl">GitHub</span></a>
+      <button class="resume-chip" data-resume><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span class="lbl">Preview résumé</span></button>
+    </div>
+  </div>
+</div>
 <div class="progress" aria-hidden="true"></div>
 
 <header class="nav">
@@ -35,8 +47,7 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="../index.html#about">About</a>
       <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#teaching">Teaching</a>
+      <a href="../index.html#projects">Projects</a>
       <a href="../index.html#lab">Lab</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
@@ -70,6 +81,7 @@
           <div><dt>Stack</dt><dd>Python · TensorFlow/Keras · PyWavelets · pandas · SQL</dd></div>
           <div><dt>Links</dt><dd><a href="../assets/docs/Aditya_Talekar_MSc_Dissertation.pdf" target="_blank" rel="noopener">Read the dissertation (PDF) ↗</a><br><a href="https://github.com/ADITYATALEKAR/EnergyNexusu" target="_blank" rel="noopener">Notebooks on GitHub ↗</a></dd></div>
         </dl>
+        <dl class="glance"><div><dt>Problem</dt><dd>City-scale energy data is locked behind regulation, privacy and confidentiality.</dd></div><div><dt>Solution</dt><dd>A synthetic London generator plus CNN-BiLSTM-attention and wavelet-LSTM forecasters.</dd></div><div><dt>Impact</dt><dd>R² 95.9% demand · 93.1% wind · 70.3% price · MSc with Distinction.</dd></div><div><dt>My role</dt><dd>Sole author — data generation, modelling, evaluation, write-up.</dd></div></dl>
       </div>
     </header>
 
@@ -170,11 +182,13 @@
           </div>
           <p>Demand MAPE stayed between 3.9% and 4.6% across horizons — the 6-hour horizon was strongest, which suits medium-term grid planning. The wind model reached an index of agreement of 0.983 and a median absolute error of 1,431 MW.</p>
           <div class="callout"><span class="k">Error analysis</span><p>The worst 5% of wind predictions (66 cases) cluster in high-wind periods, where the model <strong>over-estimates by ~15.5%</strong> on average — a systematic bias that post-processing calibration could correct. Finding the failure mode mattered more than the headline R².</p></div>
-          <div class="gallery">
-            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-demand.webp" alt="Demand model training and validation loss and MAE curves, and R² by horizon bars at 95.7, 96.8 and 95.1 percent" loading="lazy" width="1487" height="985"></div><figcaption><b>A</b>Demand: convergence and accuracy by horizon.</figcaption></figure>
-            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-price.webp" alt="Price model loss and MAE curves and R² by horizon, all around 70 percent" loading="lazy" width="1189" height="789"></div><figcaption><b>B</b>Price: the transferred architecture reaches ~70% R².</figcaption></figure>
-            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-wind-diagnostics.webp" alt="Wind model diagnostics: predicted vs actual scatter, residuals, residual distribution, Q-Q plot, time-series comparison and training history" loading="lazy" width="1790" height="1180"></div><figcaption><b>C</b>Wind: six-panel diagnostic of the wavelet-LSTM.</figcaption></figure>
-            <figure class="figure"><div class="frame plot"><img src="../assets/img/energy-wind-2016.webp" alt="Predicted versus actual German wind generation through 2016 with train, validation and test periods" loading="lazy" width="595" height="455"></div><figcaption><b>D</b>Wind: predictions across 2016, test period in black.</figcaption></figure>
+          <div class="carousel framed" data-carousel aria-label="EnergyNexus result charts">
+            <div class="carousel-track">
+              <figure class="slide"><img src="../assets/img/energy-demand.webp" alt="Demand model training and validation loss and MAE curves, and R² by horizon bars at 95.7, 96.8 and 95.1 percent" loading="lazy" width="1487" height="985" data-zoom><figcaption>Demand: convergence and accuracy by horizon.</figcaption></figure>
+              <figure class="slide"><img src="../assets/img/energy-price.webp" alt="Price model loss and MAE curves and R² by horizon, all around 70 percent" loading="lazy" width="1189" height="789" data-zoom><figcaption>Price: the transferred architecture reaches ~70% R².</figcaption></figure>
+              <figure class="slide"><img src="../assets/img/energy-wind-diagnostics.webp" alt="Wind model diagnostics: predicted vs actual scatter, residuals, residual distribution, Q-Q plot, time-series comparison and training history" loading="lazy" width="1790" height="1180" data-zoom><figcaption>Wind: six-panel diagnostic of the wavelet-LSTM.</figcaption></figure>
+              <figure class="slide"><img src="../assets/img/energy-wind-2016.webp" alt="Predicted versus actual German wind generation through 2016 with train, validation and test periods" loading="lazy" width="595" height="455" data-zoom><figcaption>Wind: predictions across 2016, test period in black.</figcaption></figure>
+            </div>
           </div>
         </section>
 

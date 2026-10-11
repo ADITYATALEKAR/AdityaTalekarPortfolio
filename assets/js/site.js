@@ -104,7 +104,7 @@
       if (reduceMotion) { el.textContent = fmt(target, dec); return; }
       const t0 = performance.now(), dur = 1400;
       const step = t => {
-        const p = Math.min(1, (t - t0) / dur);
+        const p = Math.max(0, Math.min(1, (t - t0) / dur));
         const eased = 1 - Math.pow(1 - p, 4);
         el.textContent = fmt(target * eased, dec);
         if (p < 1) requestAnimationFrame(step);
@@ -175,7 +175,7 @@
     { group: 'Navigate', label: 'About', hint: 'Who I am', href: base + 'index.html#about' },
     { group: 'Navigate', label: 'Experience', hint: 'Roles, impact & education', href: base + 'index.html#experience' },
     { group: 'Navigate', label: 'Selected work', hint: 'Case studies', href: base + 'index.html#work' },
-    { group: 'Navigate', label: 'Teaching', hint: 'DYPCOE Kolhapur', href: base + 'index.html#teaching' },
+    { group: 'Navigate', label: 'Teaching & industry outreach', hint: 'Assistant Professor role', href: base + 'index.html#role-professor' },
     { group: 'Navigate', label: 'Lab', hint: 'More projects', href: base + 'index.html#lab' },
     { group: 'Navigate', label: 'Skills', hint: 'Stack', href: base + 'index.html#skills' },
     { group: 'Navigate', label: 'Contact', hint: 'Get in touch', href: base + 'index.html#contact' },
@@ -187,6 +187,7 @@
     { group: 'Case studies', label: 'EnergyNexus', hint: 'MSc dissertation · forecasting', href: base + 'work/energynexus.html' },
     { group: 'Actions', label: 'Copy email address', hint: EMAIL, action: copyEmail },
     { group: 'Actions', label: 'Toggle light / dark theme', hint: 'T', action: toggleTheme },
+    { group: 'Actions', label: 'Preview résumé', hint: 'Opens on this page', action: () => openResume() },
     { group: 'Actions', label: 'Download résumé (PDF)', hint: 'Sep 2026', href: base + 'assets/docs/Aditya_Talekar_Resume.pdf', external: true },
     { group: 'Actions', label: 'Read the MSc dissertation (PDF)', hint: 'EnergyNexus', href: base + 'assets/docs/Aditya_Talekar_MSc_Dissertation.pdf', external: true },
     { group: 'Actions', label: 'Call or WhatsApp', hint: '+91 96739 04714', href: 'tel:+919673904714' },
@@ -258,6 +259,125 @@
   // Show the right shortcut glyph
   const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
   $$('[data-mod]').forEach(k => { k.textContent = isMac ? '⌘' : 'Ctrl'; });
+
+  /* ---------- Screenshot carousels ---------- */
+  const ICON_PREV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+  const ICON_NEXT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+  $$('[data-carousel]').forEach(car => {
+    const track = $('.carousel-track', car);
+    const slides = $$('.slide', track);
+    if (!slides.length) return;
+    car.setAttribute('role', 'region');
+    car.setAttribute('aria-roledescription', 'carousel');
+    const ui = document.createElement('div');
+    ui.className = 'car-ui';
+    ui.innerHTML = `<button class="car-btn" data-dir="-1" aria-label="Previous screenshot">${ICON_PREV}</button><span class="car-count" aria-live="polite"></span><button class="car-btn" data-dir="1" aria-label="Next screenshot">${ICON_NEXT}</button>`;
+    const dots = document.createElement('div');
+    dots.className = 'car-dots';
+    dots.innerHTML = slides.map((_, i) => `<button aria-label="Screenshot ${i + 1}"></button>`).join('');
+    car.append(ui, dots);
+    const [prev, next] = $$('.car-btn', ui);
+    const count = $('.car-count', ui);
+    const dotBtns = $$('button', dots);
+    let idx = 0;
+    const update = () => {
+      prev.disabled = idx === 0;
+      next.disabled = idx === slides.length - 1;
+      count.textContent = `${idx + 1} / ${slides.length}`;
+      dotBtns.forEach((d, i) => d.setAttribute('aria-current', String(i === idx)));
+    };
+    const go = i => {
+      idx = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: slides[idx].offsetLeft - track.offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+      update();
+    };
+    prev.addEventListener('click', () => go(idx - 1));
+    next.addEventListener('click', () => go(idx + 1));
+    dotBtns.forEach((d, i) => d.addEventListener('click', () => go(i)));
+    car.tabIndex = 0;
+    car.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(idx + 1); }
+    });
+    let t;
+    track.addEventListener('scroll', () => {
+      clearTimeout(t);
+      t = setTimeout(() => {
+        const i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i !== idx) { idx = i; update(); }
+      }, 80);
+    }, { passive: true });
+    if (slides.length < 2) { ui.hidden = true; dots.hidden = true; }
+    update();
+  });
+
+  /* ---------- Read-more panels ---------- */
+  $$('[data-more]').forEach(btn => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!panel) return;
+    const label = $('.lbl', btn);
+    const closed = label ? label.textContent : '';
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+      if (label) label.textContent = open ? 'Show less' : closed;
+      if (!open) btn.closest('.role')?.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* ---------- Tabs ---------- */
+  $$('[role="tablist"]').forEach(list => {
+    const tabs = $$('[role="tab"]', list);
+    const select = tab => {
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        const p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) p.hidden = !on;
+      });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+        select(n); n.focus();
+      });
+    });
+  });
+
+  /* ---------- Résumé preview ---------- */
+  const RESUME_PDF = base + 'assets/docs/Aditya_Talekar_Resume.pdf';
+  let resumeDlg = null;
+  function openResume() {
+    if (!resumeDlg) {
+      resumeDlg = document.createElement('dialog');
+      resumeDlg.className = 'resume-dialog';
+      resumeDlg.setAttribute('aria-label', 'Résumé preview');
+      resumeDlg.innerHTML = `
+        <div class="rd-head">
+          <div><b>Aditya Talekar — Résumé</b><span class="muted">AI Engineer · Agentic AI &amp; MLOps · 2 pages</span></div>
+          <div class="rd-actions">
+            <a class="btn btn-primary btn-sm" href="${RESUME_PDF}" download="Aditya_Talekar_Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="lbl">Download PDF</span></a>
+            <a class="btn btn-ghost btn-sm" href="${RESUME_PDF}" target="_blank" rel="noopener"><span class="lbl">Open in new tab</span> ↗</a>
+            <button class="icon-btn" data-close aria-label="Close preview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+          </div>
+        </div>
+        <div class="rd-body">
+          <img src="${base}assets/img/resume-p1.webp" alt="Résumé page 1: education and experience" width="1406" height="1988">
+          <img src="${base}assets/img/resume-p2.webp" alt="Résumé page 2: projects and technical skills" width="1406" height="1988" loading="lazy">
+        </div>`;
+      document.body.appendChild(resumeDlg);
+      $('[data-close]', resumeDlg).addEventListener('click', () => resumeDlg.close());
+      resumeDlg.addEventListener('click', e => { if (e.target === resumeDlg) resumeDlg.close(); });
+    }
+    if (typeof resumeDlg.showModal === 'function') resumeDlg.showModal();
+    else window.open(RESUME_PDF, '_blank', 'noopener');
+  }
+  $$('[data-resume]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openResume(); }));
 
   /* ---------- Grouped bar charts (data in data-chart JSON) ---------- */
   $$('.chart[data-chart]').forEach(renderBarChart);
