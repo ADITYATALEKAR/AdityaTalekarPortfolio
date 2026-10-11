@@ -608,3 +608,9 @@ svg .d-arrow-signal { fill: var(--signal); }
 @media (max-width: 880px) { .contact-row { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .contact-row { grid-template-columns: 1fr; } }
 .contact-tile.accent { border-color: var(--accent); background: var(--accent-soft); }
+
+/* education under experience */
+.sub-head { font-family: var(--font-mono); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: clamp(48px, 6vw, 72px) 0 18px; }
+.edu-note { margin: 16px 0 0; font-size: 15px; color: var(--ink-2); line-height: 1.6; }
+.tl-org a { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; color: var(--ink-2); }
+.tl-org a:hover { text-decoration-color: var(--accent); color: var(--ink); }

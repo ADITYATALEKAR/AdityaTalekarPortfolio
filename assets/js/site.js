@@ -173,8 +173,8 @@
   const COMMANDS = [
     { group: 'Navigate', label: 'Home', hint: 'Top of page', href: base + 'index.html' },
     { group: 'Navigate', label: 'About', hint: 'Who I am', href: base + 'index.html#about' },
+    { group: 'Navigate', label: 'Experience', hint: 'Roles, impact & education', href: base + 'index.html#experience' },
     { group: 'Navigate', label: 'Selected work', hint: 'Case studies', href: base + 'index.html#work' },
-    { group: 'Navigate', label: 'Experience', hint: 'Roles & impact', href: base + 'index.html#experience' },
     { group: 'Navigate', label: 'Teaching', hint: 'DYPCOE Kolhapur', href: base + 'index.html#teaching' },
     { group: 'Navigate', label: 'Lab', hint: 'More projects', href: base + 'index.html#lab' },
     { group: 'Navigate', label: 'Skills', hint: 'Stack', href: base + 'index.html#skills' },
@@ -191,6 +191,7 @@
     { group: 'Actions', label: 'Call or WhatsApp', hint: '+91 96739 04714', href: 'tel:+919673904714' },
     { group: 'Links', label: 'LinkedIn', hint: 'in/aditya-talekar', href: 'https://www.linkedin.com/in/aditya-talekar-48731532a/', external: true },
     { group: 'Links', label: 'GitHub', hint: 'github.com/ADITYATALEKAR', href: 'https://github.com/ADITYATALEKAR', external: true },
+    { group: 'Links', label: 'Exactitude Consultancy (client site)', hint: 'exactitudeconsultancy.com', href: 'https://exactitudeconsultancy.com/', external: true },
     { group: 'Links', label: 'Medium', hint: '@aditya.a.talekar', href: 'https://medium.com/@aditya.a.talekar', external: true },
     { group: 'Links', label: 'Wave Engine on VS Code Marketplace', hint: 'Install', href: 'https://marketplace.visualstudio.com/items?itemName=FundamentalLabs.mas-agent', external: true },
   ];

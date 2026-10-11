@@ -52,8 +52,8 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
       <a href="#teaching">Teaching</a>
       <a href="#lab">Lab</a>
       <a href="#contact">Contact</a>
@@ -172,11 +172,80 @@
     </div>
   </section>
 
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="num">02</span> Experience</span>
+        <h2 class="h-display h2">From building sites to <em>building agents</em>.</h2>
+        <p class="lede">Three years running infrastructure projects taught me to automate the boring parts. An MSc in AI turned that habit into a career.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-when">Jun 2026 — Present<br><span class="now"><span class="dot live"></span>Current</span></div>
+          <div>
+            <h3 class="tl-role">Assistant Professor — Artificial Intelligence</h3>
+            <p class="tl-org">Dr. D. Y. Patil Pratishthan's College of Engineering, Kolhapur</p>
+            <ul class="tl-points">
+              <li>Teach <b>C Programming, Data Structures and Artificial Intelligence</b> to ~300 students. The AI course runs from core theory — intelligent agents, search, reasoning under uncertainty, machine learning — to deploying LLM-powered agents with vLLM.</li>
+              <li>Mentor student teams through AI-agent hackathons: provisioning AMD cloud GPU droplets, managing API keys and self-hosting LLMs — demonstrated by <b>deploying a 30B-parameter model</b> and wiring it into a live application.</li>
+              <li>Industry Outreach Coordinator for the department; built its offline-first attendance platform.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when">May 2026 — Jun 2026<br>Remote</div>
+          <div>
+            <h3 class="tl-role">Independent AI Consultant</h3>
+            <p class="tl-org"><a href="https://exactitudeconsultancy.com/" target="_blank" rel="noopener">Exactitude Consultancy ↗</a> · Pune — market research · <a href="work/exactitude.html">Case study</a></p>
+            <ul class="tl-points">
+              <li>Delivered a revamped PHP website and an autonomous system of <b>seven coordinated agents</b> (LangChain, LangGraph), translating business requirements from cross-functional stakeholders.</li>
+              <li>Configured Cloudflare rules, rate limits and timeouts against AI scrapers and scanners — <b>1.35M threat-flagged requests (8% of 17.6M) blocked in 48 hours</b>.</li>
+              <li>Automated blog and press-release drafting, LinkedIn and segmented email outreach — <b>scaling outreach 10× (100 → 1,000)</b> and cutting manual customer search from 10 hours to ~1.</li>
+              <li>Load-balanced 10 free-tier LLM providers on GitHub Actions with 33 rotating keys, taking AI/data costs from an estimated <b>$24–36k to effectively $0</b>.</li>
+              <li>Built a citation-grounded data-quality pipeline in Python and MySQL: <b>chart-data mismatches 39% → 0%</b> on a verified sample, 168 reports corrected.</li>
+            </ul>
+            <div class="chip-row"><span class="chip">LangGraph</span><span class="chip">Python</span><span class="chip">MySQL</span><span class="chip">PHP</span><span class="chip">GitHub Actions</span><span class="chip">Cloudflare</span></div>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when">May 2021 — Jun 2024<br>Pune</div>
+          <div>
+            <h3 class="tl-role">Project Engineer</h3>
+            <p class="tl-org">Talekar Infra LLP — infrastructure projects</p>
+            <ul class="tl-points">
+              <li>Automated cost, quantity and progress reporting with Python, Excel and Power BI — <b>report turnaround from 1 month to 1 week</b> while managing a team of 10.</li>
+              <li>Applied LLMs and web search to speed up plan design and client sourcing, saving ~2 hours of manual work a day.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-head reveal">Education</h3>
+      <div class="edu">
+        <div class="panel reveal">
+          <div class="when">Sep 2024 — Sep 2025 · London, UK</div>
+          <h3>MSc Data Science &amp; Artificial Intelligence</h3>
+          <div class="where">Queen Mary University of London</div>
+          <span class="badge">★ Distinction</span>
+          <p class="edu-note">Dissertation: <a href="work/energynexus.html">EnergyNexus</a> — LSTM-based forecasting of energy demand, price and wind generation (R² up to 95.9%). <a href="assets/docs/Aditya_Talekar_MSc_Dissertation.pdf" target="_blank" rel="noopener">Read the PDF</a>.</p>
+        </div>
+        <div class="panel reveal" data-delay="1">
+          <div class="when">Graduated Apr 2021 · Pune, India</div>
+          <h3>BE Civil Engineering</h3>
+          <div class="where">Savitribai Phule Pune University</div>
+          <p class="edu-note">The foundation for three years of infrastructure project engineering — and my first automation work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ WORK ============ -->
   <section class="section" id="work">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow"><span class="num">02</span> Selected work</span>
+        <span class="eyebrow"><span class="num">03</span> Selected work</span>
         <h2 class="h-display h2">Systems that <em>reason</em>, then prove it.</h2>
         <p class="lede">Each project below has a full case study — the problem, the architecture, the decisions that mattered and what I'd do next.</p>
       </div>
@@ -230,7 +299,7 @@
         <!-- Exactitude -->
         <article class="work-card reveal">
           <div class="work-body">
-            <div class="work-meta"><span class="idx">03</span><span>Freelance</span><span>·</span><span>2026</span><span>·</span><span>Exactitude Consultancy</span></div>
+            <div class="work-meta"><span class="idx">03</span><span>Client work</span><span>·</span><span>2026</span><span>·</span><span>Exactitude Consultancy</span></div>
             <h3 class="work-title">Agentic automation for a research firm</h3>
             <p class="work-sub">Seven coordinated agents that draft, verify and distribute a market-research firm's content — on a zero-cost LLM layer that fails over across 10 providers, with a citation-grounded pipeline that stops hallucinated statistics from reaching published reports.</p>
             <div class="work-stats">
@@ -244,36 +313,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
           </div>
-          <div class="work-media" aria-hidden="true">
-            <svg class="diagram" viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
-              <defs>
-                <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker>
-                <marker id="ah1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow-accent"/></marker>
-              </defs>
-              <text x="40" y="52" class="d-label">sources</text>
-              <rect x="40" y="64" width="150" height="46" rx="10" class="d-box"/><text x="56" y="92" class="d-title">Report catalogue</text>
-              <rect x="40" y="122" width="150" height="46" rx="10" class="d-box"/><text x="56" y="150" class="d-title">Registries · web</text>
-              <rect x="230" y="64" width="150" height="104" rx="12" class="d-box-accent"/>
-              <text x="246" y="94" class="d-title">LLM gateway</text>
-              <text x="246" y="116" class="d-text">10 providers</text>
-              <text x="246" y="134" class="d-text">33 rotated keys</text>
-              <text x="246" y="152" class="d-text">auto failover</text>
-              <path d="M190 87h38M190 145h38" class="d-edge" marker-end="url(#ah1)"/>
-              <text x="40" y="216" class="d-label">agents (langgraph)</text>
-              <g>
-                <rect x="40" y="228" width="122" height="40" rx="9" class="d-box"/><text x="54" y="253" class="d-title">Research</text>
-                <rect x="172" y="228" width="122" height="40" rx="9" class="d-box"/><text x="186" y="253" class="d-title">Blog · PR</text>
-                <rect x="304" y="228" width="122" height="40" rx="9" class="d-box"/><text x="318" y="253" class="d-title">LinkedIn</text>
-                <rect x="436" y="228" width="122" height="40" rx="9" class="d-box"/><text x="450" y="253" class="d-title">Email</text>
-                <rect x="40" y="278" width="254" height="40" rx="9" class="d-box-signal"/><text x="54" y="303" class="d-title">Citation-grounded QA</text>
-                <rect x="304" y="278" width="254" height="40" rx="9" class="d-box"/><text x="318" y="303" class="d-title">Enrichment · matching</text>
-              </g>
-              <path d="M305 168v56" class="d-edge-accent d-flow" marker-end="url(#ah1a)"/>
-              <rect x="150" y="360" width="300" height="50" rx="12" class="d-box"/>
-              <text x="168" y="383" class="d-title">Human approval queue</text>
-              <text x="168" y="400" class="d-text">draft → approved → published</text>
-              <path d="M300 320v38" class="d-edge" marker-end="url(#ah1)"/>
-            </svg>
+          <div class="work-media">
+            <div class="media-frame"><img src="assets/img/exa-home.webp" alt="The Exactitude Consultancy homepage I rebuilt: report search across 30,000+ reports and popular industries" loading="lazy" width="1800" height="982"></div>
           </div>
         </article>
 
@@ -349,69 +390,6 @@
           </div>
         </article>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="section" id="experience">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="num">03</span> Experience</span>
-        <h2 class="h-display h2">From building sites to <em>building agents</em>.</h2>
-        <p class="lede">Three years running infrastructure projects taught me to automate the boring parts. An MSc in AI turned that habit into a career.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="tl-item reveal">
-          <div class="tl-when">Jun 2026 — Present<br><span class="now"><span class="dot live"></span>Current</span></div>
-          <div>
-            <h3 class="tl-role">Assistant Professor — Artificial Intelligence</h3>
-            <p class="tl-org">Dr. D. Y. Patil Pratishthan's College of Engineering, Kolhapur</p>
-            <ul class="tl-points">
-              <li>Teach <b>C Programming, Data Structures and Artificial Intelligence</b> to ~300 students. The AI course runs from core theory — intelligent agents, search, reasoning under uncertainty, machine learning — to deploying LLM-powered agents with vLLM.</li>
-              <li>Mentor student teams through AI-agent hackathons: provisioning AMD cloud GPU droplets, managing API keys and self-hosting LLMs — demonstrated by <b>deploying a 30B-parameter model</b> and wiring it into a live application.</li>
-              <li>Industry Outreach Coordinator for the department; built its offline-first attendance platform.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-when">May 2026 — Jun 2026<br>Remote</div>
-          <div>
-            <h3 class="tl-role">Independent AI Consultant</h3>
-            <p class="tl-org">Exactitude Consultancy, Pune — market research</p>
-            <ul class="tl-points">
-              <li>Delivered a revamped PHP website and an autonomous system of <b>seven coordinated agents</b> (LangChain, LangGraph), translating business requirements from cross-functional stakeholders.</li>
-              <li>Configured Cloudflare rules, rate limits and timeouts against AI scrapers and scanners — <b>1.35M threat-flagged requests (8% of 17.6M) blocked in 48 hours</b>.</li>
-              <li>Automated blog and press-release drafting, LinkedIn and segmented email outreach — <b>scaling outreach 10× (100 → 1,000)</b> and cutting manual customer search from 10 hours to ~1.</li>
-              <li>Load-balanced 10 free-tier LLM providers on GitHub Actions with 33 rotating keys, taking AI/data costs from an estimated <b>$24–36k to effectively $0</b>.</li>
-              <li>Built a citation-grounded data-quality pipeline in Python and MySQL: <b>chart-data mismatches 39% → 0%</b> on a verified sample, 168 reports corrected.</li>
-            </ul>
-            <div class="chip-row"><span class="chip">LangGraph</span><span class="chip">Python</span><span class="chip">MySQL</span><span class="chip">PHP</span><span class="chip">GitHub Actions</span><span class="chip">Cloudflare</span></div>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-when">Sep 2024 — Sep 2025<br>London, UK</div>
-          <div>
-            <h3 class="tl-role">MSc Data Science &amp; Artificial Intelligence — Distinction</h3>
-            <p class="tl-org">Queen Mary University of London</p>
-            <ul class="tl-points">
-              <li>Dissertation: <a href="work/energynexus.html">EnergyNexus</a> — deep-learning forecasting of energy demand, wind generation and price (R² up to 95.9%).</li>
-              <li>Coursework spanning deep learning, NLP, information retrieval and distributed training.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-when">May 2021 — Jun 2024<br>Pune</div>
-          <div>
-            <h3 class="tl-role">Project Engineer</h3>
-            <p class="tl-org">Talekar Infra LLP — infrastructure projects</p>
-            <ul class="tl-points">
-              <li>Automated cost, quantity and progress reporting with Python, Excel and Power BI — <b>report turnaround from 1 month to 1 week</b> while managing a team of 10.</li>
-              <li>Applied LLMs and web search to speed up plan design and client sourcing, saving ~2 hours of manual work a day.</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -520,19 +498,6 @@
         </div>
       </div>
 
-      <div class="edu" style="margin-top: 16px">
-        <div class="panel reveal">
-          <div class="when">Sep 2024 — Sep 2025</div>
-          <h3>MSc Data Science &amp; Artificial Intelligence</h3>
-          <div class="where">Queen Mary University of London, UK</div>
-          <span class="badge">★ Distinction</span>
-        </div>
-        <div class="panel reveal" data-delay="1">
-          <div class="when">Graduated Apr 2021</div>
-          <h3>BE Civil Engineering</h3>
-          <div class="where">Savitribai Phule Pune University, India</div>
-        </div>
-      </div>
     </div>
   </section>
 
