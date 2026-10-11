@@ -189,7 +189,9 @@
     { group: 'Actions', label: 'Toggle light / dark theme', hint: 'T', action: toggleTheme },
     { group: 'Actions', label: 'Preview résumé', hint: 'Opens on this page', action: () => openResume() },
     { group: 'Actions', label: 'Download résumé (PDF)', hint: 'Sep 2026', href: base + 'assets/docs/Aditya_Talekar_Resume.pdf', external: true },
+    { group: 'Actions', label: 'Preview MSc dissertation', hint: 'Opens on this page', action: () => openDoc('thesis') },
     { group: 'Actions', label: 'Read the MSc dissertation (PDF)', hint: 'EnergyNexus', href: base + 'assets/docs/Aditya_Talekar_MSc_Dissertation.pdf', external: true },
+    { group: 'Links', label: 'Research paper — smart solid-waste management (IJAER 2021)', hint: 'ijaer.com', href: 'https://ijaer.com/admin/upload/07%20Pratik%20Murke%2001144.pdf', external: true },
     { group: 'Actions', label: 'Call or WhatsApp', hint: '+91 96739 04714', href: 'tel:+919673904714' },
     { group: 'Links', label: 'LinkedIn', hint: 'in/aditya-talekar', href: 'https://www.linkedin.com/in/aditya-talekar-48731532a/', external: true },
     { group: 'Links', label: 'GitHub', hint: 'github.com/ADITYATALEKAR', href: 'https://github.com/ADITYATALEKAR', external: true },
@@ -349,35 +351,42 @@
     });
   });
 
-  /* ---------- Résumé preview ---------- */
-  const RESUME_PDF = base + 'assets/docs/Aditya_Talekar_Resume.pdf';
-  let resumeDlg = null;
-  function openResume() {
-    if (!resumeDlg) {
-      resumeDlg = document.createElement('dialog');
-      resumeDlg.className = 'resume-dialog';
-      resumeDlg.setAttribute('aria-label', 'Résumé preview');
-      resumeDlg.innerHTML = `
+  /* ---------- Document preview (résumé, dissertation) ---------- */
+  const DOCS = {
+    resume: { title: 'Aditya Talekar — Résumé', sub: 'AI Engineer · Agentic AI & MLOps · 2 pages', pdf: base + 'assets/docs/Aditya_Talekar_Resume.pdf', file: 'Aditya_Talekar_Resume.pdf', pages: 2, img: i => `${base}assets/img/resume-p${i}.webp`, w: 1406, h: 1988, alt: i => `Résumé page ${i}` },
+    thesis: { title: 'MSc Dissertation — EnergyNexus', sub: 'A Comprehensive Study of LSTM-Based Energy Demand, Energy Price, and Wind Energy Generation Prediction · QMUL 2025 · 9 pages', pdf: base + 'assets/docs/Aditya_Talekar_MSc_Dissertation.pdf', file: 'Aditya_Talekar_MSc_Dissertation.pdf', pages: 9, img: i => `${base}assets/img/thesis-p${i}.webp`, w: 1020, h: 1320, alt: i => `Dissertation page ${i}` },
+  };
+  const dlgs = {};
+  function openDoc(key) {
+    const d = DOCS[key];
+    if (!d) return;
+    if (!dlgs[key]) {
+      const dlg = document.createElement('dialog');
+      dlg.className = 'resume-dialog';
+      dlg.setAttribute('aria-label', d.title + ' preview');
+      const pages = Array.from({ length: d.pages }, (_, i) => `<img src="${d.img(i + 1)}" alt="${d.alt(i + 1)}" width="${d.w}" height="${d.h}"${i ? ' loading="lazy"' : ''}>`).join('');
+      dlg.innerHTML = `
         <div class="rd-head">
-          <div><b>Aditya Talekar — Résumé</b><span class="muted">AI Engineer · Agentic AI &amp; MLOps · 2 pages</span></div>
+          <div><b>${d.title}</b><span class="muted">${d.sub}</span></div>
           <div class="rd-actions">
-            <a class="btn btn-primary btn-sm" href="${RESUME_PDF}" download="Aditya_Talekar_Resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="lbl">Download PDF</span></a>
-            <a class="btn btn-ghost btn-sm" href="${RESUME_PDF}" target="_blank" rel="noopener"><span class="lbl">Open in new tab</span> ↗</a>
+            <a class="btn btn-primary btn-sm" href="${d.pdf}" download="${d.file}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span class="lbl">Download PDF</span></a>
+            <a class="btn btn-ghost btn-sm" href="${d.pdf}" target="_blank" rel="noopener"><span class="lbl">Open in new tab</span> ↗</a>
             <button class="icon-btn" data-close aria-label="Close preview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
           </div>
         </div>
-        <div class="rd-body">
-          <img src="${base}assets/img/resume-p1.webp" alt="Résumé page 1: education and experience" width="1406" height="1988">
-          <img src="${base}assets/img/resume-p2.webp" alt="Résumé page 2: projects and technical skills" width="1406" height="1988" loading="lazy">
-        </div>`;
-      document.body.appendChild(resumeDlg);
-      $('[data-close]', resumeDlg).addEventListener('click', () => resumeDlg.close());
-      resumeDlg.addEventListener('click', e => { if (e.target === resumeDlg) resumeDlg.close(); });
+        <div class="rd-body">${pages}</div>`;
+      document.body.appendChild(dlg);
+      $('[data-close]', dlg).addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+      dlgs[key] = dlg;
     }
-    if (typeof resumeDlg.showModal === 'function') resumeDlg.showModal();
-    else window.open(RESUME_PDF, '_blank', 'noopener');
+    const dlg = dlgs[key];
+    if (typeof dlg.showModal === 'function') { dlg.showModal(); $('.rd-body', dlg).scrollTop = 0; }
+    else window.open(d.pdf, '_blank', 'noopener');
   }
-  $$('[data-resume]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openResume(); }));
+  const openResume = () => openDoc('resume');
+  $$('[data-resume]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openDoc('resume'); }));
+  $$('[data-doc]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openDoc(b.dataset.doc); }));
 
   /* ---------- Grouped bar charts (data in data-chart JSON) ---------- */
   $$('.chart[data-chart]').forEach(renderBarChart);
