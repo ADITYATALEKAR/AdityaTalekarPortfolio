@@ -614,3 +614,16 @@ svg .d-arrow-signal { fill: var(--signal); }
 .edu-note { margin: 16px 0 0; font-size: 15px; color: var(--ink-2); line-height: 1.6; }
 .tl-org a { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; color: var(--ink-2); }
 .tl-org a:hover { text-decoration-color: var(--accent); color: var(--ink); }
+
+/* deep-dive call to action */
+.deep-cta { display: grid; gap: 10px; margin: 30px 0 4px; padding: 24px 26px; border: 1px solid var(--accent); border-radius: var(--radius-lg); background: linear-gradient(135deg, var(--accent-soft), transparent 70%), var(--bg-elev); text-decoration: none; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.deep-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.deep-cta-k { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.deep-cta-t { font-family: var(--font-display); font-size: clamp(26px, 3vw, 34px); line-height: 1.1; color: var(--ink); display: flex; align-items: center; gap: 12px; }
+.deep-cta-t svg { width: 22px; height: 22px; flex: none; transition: transform .3s var(--ease); }
+.deep-cta:hover .deep-cta-t svg { transform: translateX(5px); }
+.deep-cta-stats { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--muted); }
+.deep-cta-stats b { color: var(--ink); font-weight: 500; }
+.prose a.deep-cta { text-decoration: none; }
+.work-foot .sub-link { position: relative; z-index: 2; font-size: 14px; color: var(--muted); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+.work-foot .sub-link:hover { color: var(--accent); text-decoration-color: var(--accent); }

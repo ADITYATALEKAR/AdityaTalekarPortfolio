@@ -182,6 +182,7 @@
     { group: 'Case studies', label: 'Wave Engine', hint: 'Multi-agent coding assistant', href: base + 'work/wave-engine.html' },
     { group: 'Case studies', label: 'Guardian', hint: 'Attack-surface intelligence', href: base + 'work/guardian.html' },
     { group: 'Case studies', label: 'Agentic automation for a research firm', hint: 'Freelance · Exactitude', href: base + 'work/exactitude.html' },
+    { group: 'Case studies', label: 'Exactitude — technical deep dive', hint: '8 case studies', href: base + 'work/exactitude-deep-dive.html' },
     { group: 'Case studies', label: 'NexusRAG', hint: 'Hybrid retrieval platform', href: base + 'work/nexusrag.html' },
     { group: 'Case studies', label: 'EnergyNexus', hint: 'MSc dissertation · forecasting', href: base + 'work/energynexus.html' },
     { group: 'Actions', label: 'Copy email address', hint: EMAIL, action: copyEmail },
