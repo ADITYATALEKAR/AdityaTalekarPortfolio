@@ -60,7 +60,7 @@
   }
 
   // Highlight the nav link for the section in view (home page)
-  const navLinks = $$('.nav-links a[href^="#"]');
+  const navLinks = $$('.nav-links a[href^="#"], .subnav a[href^="#"]');
   if (navLinks.length && 'IntersectionObserver' in window) {
     const map = new Map(navLinks.map(a => [a.getAttribute('href').slice(1), a]));
     const io = new IntersectionObserver(entries => {
@@ -177,8 +177,8 @@
     { group: 'Navigate', label: 'Education', hint: 'MSc, BE, publication, certifications', href: base + 'index.html#education' },
     { group: 'Navigate', label: 'Selected work', hint: 'Case studies', href: base + 'index.html#work' },
     { group: 'Navigate', label: 'Teaching & industry outreach', hint: 'Assistant Professor role', href: base + 'index.html#role-professor' },
-    { group: 'Navigate', label: 'Lab', hint: 'More projects', href: base + 'index.html#lab' },
     { group: 'Navigate', label: 'Skills', hint: 'Stack', href: base + 'index.html#skills' },
+    { group: 'Navigate', label: 'Lab', hint: 'Smaller projects', href: base + 'index.html#lab' },
     { group: 'Navigate', label: 'Contact', hint: 'Get in touch', href: base + 'index.html#contact' },
     { group: 'Case studies', label: 'Wave Engine', hint: 'Multi-agent coding assistant', href: base + 'work/wave-engine.html' },
     { group: 'Case studies', label: 'Guardian', hint: 'Attack-surface intelligence', href: base + 'work/guardian.html' },
@@ -187,7 +187,6 @@
     { group: 'Case studies', label: 'NexusRAG', hint: 'Hybrid retrieval platform', href: base + 'work/nexusrag.html' },
     { group: 'Case studies', label: 'EnergyNexus', hint: 'MSc dissertation · forecasting', href: base + 'work/energynexus.html' },
     { group: 'Actions', label: 'Copy email address', hint: EMAIL, action: copyEmail },
-    { group: 'Actions', label: 'Toggle light / dark theme', hint: 'T', action: toggleTheme },
     { group: 'Actions', label: 'Preview résumé', hint: 'Opens on this page', action: () => openResume() },
     { group: 'Actions', label: 'Download résumé (PDF)', hint: 'Sep 2026', href: base + 'assets/docs/Aditya_Talekar_Resume.pdf', external: true },
     { group: 'Actions', label: 'Preview MSc dissertation', hint: 'Opens on this page', action: () => openDoc('thesis') },
@@ -256,7 +255,6 @@
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); cmdk.classList.contains('open') ? close() : open(); }
       else if (!typing && e.key === '/' && !cmdk.classList.contains('open')) { e.preventDefault(); open(); }
-      else if (!typing && e.key.toLowerCase() === 't' && !e.metaKey && !e.ctrlKey && !e.altKey && !cmdk.classList.contains('open')) toggleTheme();
     });
   }
   // Show the right shortcut glyph
