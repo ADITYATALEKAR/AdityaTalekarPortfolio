@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="../assets/css/site.css">
-  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script>var t=null;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.dataset.theme=t||'dark'</script>
 </head>
 <body data-base="../">
 <a class="skip" href="#main">Skip to content</a>
@@ -46,8 +46,8 @@
       <span class="brand-name">Aditya Talekar <span>· AI Engineer</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="../index.html#about">About</a>
       <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#education">Education</a>
       <a href="../index.html#projects">Projects</a>
       <a href="../index.html#lab">Lab</a>
       <a href="../index.html#contact">Contact</a>
@@ -69,6 +69,7 @@
 </header>
 
 <main id="main">
+  <div class="wrap"><a class="back-btn" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to all projects</a></div>
   <article>
     <header class="cs-hero">
       <div class="wrap">
@@ -213,6 +214,7 @@
       <span class="t">Wave Engine<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
   </div>
+  <a class="to-top" href="#main" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 </main>
 
 <footer class="footer">

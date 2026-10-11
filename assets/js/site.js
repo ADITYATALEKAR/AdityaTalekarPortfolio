@@ -43,7 +43,8 @@
 
   /* ---------- Nav ---------- */
   const nav = $('.nav');
-  const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 8);
+  const toTop = $('.to-top');
+  const onScroll = () => { nav && nav.classList.toggle('scrolled', window.scrollY > 8); toTop && toTop.classList.toggle('show', window.scrollY > 600); };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
   const menuBtn = $('.menu-btn');
@@ -172,8 +173,8 @@
   /* ---------- Command palette ---------- */
   const COMMANDS = [
     { group: 'Navigate', label: 'Home', hint: 'Top of page', href: base + 'index.html' },
-    { group: 'Navigate', label: 'About', hint: 'Who I am', href: base + 'index.html#about' },
-    { group: 'Navigate', label: 'Experience', hint: 'Roles, impact & education', href: base + 'index.html#experience' },
+    { group: 'Navigate', label: 'Work experience', hint: 'Four roles, newest first', href: base + 'index.html#experience' },
+    { group: 'Navigate', label: 'Education', hint: 'MSc, BE, publication, certifications', href: base + 'index.html#education' },
     { group: 'Navigate', label: 'Selected work', hint: 'Case studies', href: base + 'index.html#work' },
     { group: 'Navigate', label: 'Teaching & industry outreach', hint: 'Assistant Professor role', href: base + 'index.html#role-professor' },
     { group: 'Navigate', label: 'Lab', hint: 'More projects', href: base + 'index.html#lab' },

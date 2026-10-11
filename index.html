@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
-  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script>var t=null;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.dataset.theme=t||'dark'</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,6 +43,7 @@
 </head>
 <body data-base="">
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Kolhapur, India · IST (UTC+5:30)</div>
@@ -64,8 +65,8 @@
       <span class="brand-name">Aditya Talekar <span>· AI Engineer</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
       <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#lab">Lab</a>
       <a href="#contact">Contact</a>
@@ -87,123 +88,43 @@
 </header>
 
 <main id="main">
-
   <!-- ============ HERO ============ -->
-  <section class="hero hero2">
-    <div class="wrap hero2-grid">
-      <div>
-        <span class="kicker rise">AI Engineer · Agentic AI &amp; MLOps</span>
-        <h1 class="rise">Aditya <em>Talekar</em></h1>
-        <p class="hero-lede rise">I build <strong>multi-agent LLM systems that check their own work</strong> — grounded in real evidence and verified before anything ships — and I teach engineers how to build them.</p>
-        <ul class="now-list rise">
-          <li><span>Now</span><span>Assistant Professor, Artificial Intelligence — Dr. D. Y. Patil Pratishthan's College of Engineering, Kolhapur</span></li>
-          <li><span>Also</span><span>Industry Outreach Coordinator · hackathon mentor</span></li>
-          <li><span>Shipped</span><span><a href="work/wave-engine.html">Wave Engine</a> on the VS Code Marketplace · production AI for <a href="work/exactitude.html">Exactitude Consultancy</a></span></li>
-          <li><span>Education</span><span>MSc Data Science &amp; AI, Queen Mary University of London — Distinction · <a href="#" data-doc="thesis">preview the dissertation</a></span></li>
-        </ul>
-        <div class="hero-cta rise">
-          <a class="btn btn-primary" href="#projects">Explore projects
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <button class="btn btn-ghost" data-resume>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
-            Preview résumé</button>
-          <a class="btn btn-ghost" href="#contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            Contact</a>
-        </div>
-      </div>
+  <section class="hero3" id="top">
+    <div class="wrap hero3-grid">
       <figure class="hero-photo rise">
         <img src="assets/img/aditya-portrait.webp" alt="Portrait of Aditya Talekar" width="760" height="950" fetchpriority="high">
-        <figcaption><b>Aditya Talekar</b><span>AI Engineer &amp; Assistant Professor · Kolhapur, India</span></figcaption>
       </figure>
-    </div>
-  </section>
-
-  <!-- ============ METRICS ============ -->
-  <section class="wrap" aria-label="Impact at a glance" style="padding-bottom: clamp(56px, 8vw, 96px)">
-    <div class="metrics reveal">
-      <div class="metric">
-        <div class="metric-value"><span data-count="107">107</span></div>
-        <div class="metric-label"><b>Specialist agents</b> coordinated by a local 4-bit Qwen model in Wave Engine</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value"><span data-count="22000">22,000</span><small>+</small></div>
-        <div class="metric-label"><b>Market figures corrected</b> and traced to published sources</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">909<small>→</small>1<small>ms</small></div>
-        <div class="metric-label"><b>Homepage load time</b> on a 30,000-report production site</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value"><span data-count="300">300</span></div>
-        <div class="metric-label"><b>Engineering students</b> taught AI, C and Data Structures</div>
+      <div class="hero3-info">
+        <span class="kicker rise">AI Engineer · Agentic AI &amp; MLOps · Assistant Professor</span>
+        <h1 class="rise">Aditya <em>Talekar</em></h1>
+        <ul class="card-lines rise">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+919673904714">+91 96739 04714</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:aditya.a.talekar@gmail.com">aditya.a.talekar@gmail.com</a><button class="copy-btn" data-copy-email aria-label="Copy email address">copy</button></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Kolhapur, India · IST (UTC+5:30)</span></li>
+        </ul>
+        <div class="social-row rise">
+          <a href="https://www.linkedin.com/in/aditya-talekar-48731532a/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin.com/in/aditya-talekar</a>
+          <a href="https://github.com/ADITYATALEKAR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.3-2.5-1-3.5.3-1.2.3-2.4 0-3.5 0 0-1 0-3 1.5a10.6 10.6 0 0 0-8 0C6 2 5 2 5 2c-.3 1.2-.3 2.4 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.4.5-.7 1-.9 1.7-.2.6-.2 1.2-.1 1.8v4"/><path d="M9 18c-4.5 2-5-2-7-2"/></svg>github.com/ADITYATALEKAR</a>
+          <a href="https://medium.com/@aditya.a.talekar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h2l2 5 2-5h2v8h-2v-5l-2 5-2-5v5H8z"/></svg>medium.com/@aditya.a.talekar</a>
+        </div>
+        <p class="hero-lede rise">I build <strong>multi-agent LLM systems that check their own work</strong> — grounded in real evidence and verified before anything ships. I've shipped a 107-agent coding assistant to the VS Code Marketplace, built attack-surface intelligence for banks, and run production AI for a research firm on a near-zero budget. Now I teach AI to engineering students in Kolhapur.</p>
+        <div class="hero-cta rise">
+          <button class="btn btn-primary" data-resume><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Preview résumé</button>
+          <button class="btn btn-ghost" data-doc="thesis">Preview thesis</button>
+          <a class="btn btn-ghost" href="#projects">See projects <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="num">01</span> About</span>
-        <h2 class="h-display h2">Civil engineer turned <em>AI engineer</em>.</h2>
-      </div>
-      <div class="about2">
-        <div class="about-copy reveal">
-          <p>I started out running infrastructure projects in Pune, where I spent three years replacing manual reporting with Python and Power BI. That habit of turning tedious work into systems took me to <strong>Queen Mary University of London</strong> for an MSc in Data Science &amp; AI, which I finished with Distinction.</p>
-          <p>Since then I've worked on one question: <strong>how do you make LLM systems trustworthy enough to run unattended?</strong> My answer is usually more engineering, not a bigger model — agents that gather evidence, critics that check it, confidence gates, caches, and a human approval step where it matters.</p>
-          <p>Today I teach AI to engineering students, coordinate the department's industry outreach, and keep shipping real systems.</p>
-        </div>
-        <div class="facts-card reveal" data-delay="1">
-          <dl class="facts">
-            <div><dt>Based in</dt><dd>Kolhapur, India · IST (UTC+5:30)</dd></div>
-            <div><dt>Now</dt><dd>Assistant Professor, AI &amp; Industry Outreach Coordinator</dd></div>
-            <div><dt>Focus</dt><dd>Agentic systems · RAG · LLM ops · data pipelines</dd></div>
-            <div><dt>Education</dt><dd>MSc DS &amp; AI, QMUL (Distinction) · BE Civil, SPPU</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="pillars">
-        <div class="pillar reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M6 7l4 3M18 7l-4 3M6 17l4-3M18 17l-4-3"/></svg></div>
-          <h3>Agentic AI systems</h3>
-          <ul>
-            <li>Multi-agent orchestration — blackboards, capability bidding, agent councils</li>
-            <li>Self-correction with critics and confidence gates</li>
-            <li>Local-first inference — llama.cpp, vLLM, 4-bit models</li>
-            <li>Cited retrieval — hybrid search, RAG, abstention</li>
-          </ul>
-        </div>
-        <div class="pillar reveal" data-delay="1">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
-          <h3>Data &amp; AI pipelines</h3>
-          <ul>
-            <li>Verification pipelines at 30,000-report scale</li>
-            <li>Free compute fleets on GitHub Actions</li>
-            <li>Registry-backed data — FDA, GLEIF, Wikidata, SEC</li>
-            <li>Performance and edge — Cloudflare, Apache caching</li>
-          </ul>
-        </div>
-        <div class="pillar reveal" data-delay="2">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
-          <h3>Teaching &amp; community</h3>
-          <ul>
-            <li>AI, C Programming and Data Structures using C</li>
-            <li>Hackathon sessions on self-hosting LLMs</li>
-            <li>Industry outreach and communication for the department</li>
-            <li>Tools for the department — an offline-first attendance platform</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="moments-head reveal"><span class="eyebrow">In the room</span><p class="muted">Learning from the teams building the tools I use.</p></div>
-      <div class="moments">
-        <figure class="moment reveal"><img src="assets/img/event-ibm-quantum-2.webp" alt="Aditya standing beside IBM Quantum System One" width="960" height="1200" loading="lazy" data-zoom><figcaption>IBM Quantum System One</figcaption></figure>
-        <figure class="moment reveal" data-delay="1"><img src="assets/img/event-aws-genai.webp" alt="Aditya at the registration desk of AWS GenAI and Data Day" width="960" height="1200" loading="lazy" data-zoom><figcaption>AWS GenAI &amp; Data Day</figcaption></figure>
-        <figure class="moment reveal" data-delay="2"><img src="assets/img/event-datastax.webp" alt="A DataStax speaker presenting Langflow on stage" width="900" height="1125" loading="lazy" data-zoom><figcaption>DataStax · Langflow session</figcaption></figure>
-        <figure class="moment reveal" data-delay="3"><img src="assets/img/event-ibm-quantum.webp" alt="Aditya beside the IBM Quantum System One display at IBM" width="960" height="1200" loading="lazy" data-zoom><figcaption>Visiting IBM</figcaption></figure>
-      </div>
+      <nav class="section-nav rise" aria-label="Sections">
+        <span class="section-nav-k">On this page</span>
+        <a href="#experience"><b>01</b> Work experience</a>
+        <a href="#education"><b>02</b> Education</a>
+        <a href="#projects"><b>03</b> Projects</a>
+        <a href="#lab"><b>04</b> Lab</a>
+        <a href="#skills"><b>05</b> Skills</a>
+        <a href="#contact"><b>06</b> Contact</a>
+      </nav>
     </div>
   </section>
 
@@ -211,13 +132,11 @@
   <section class="section" id="experience">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow"><span class="num">02</span> Experience</span>
+        <span class="eyebrow"><span class="num">01</span> Work experience</span>
         <h2 class="h-display h2">From building sites to <em>building agents</em>.</h2>
-        <p class="lede">Each role has a summary up front — open <b>Read more</b> for the full breakdown.</p>
+        <p class="lede">Four roles, newest first. Each card opens with the headline results — press <b>See more</b> for the full breakdown, and follow the link inside for the complete case study.</p>
       </div>
-
       <div class="roles">
-
         <!-- Assistant Professor -->
         <article class="role reveal" id="role-professor">
           <div class="role-head">
@@ -237,7 +156,7 @@
               <li>Conduct <b>hackathon sessions</b>: provisioning AMD cloud GPU droplets, managing API keys and self-hosting LLMs — demonstrated by deploying a <b>30B-parameter model</b> into a live application.</li>
             </ul>
             <div class="role-foot">
-              <button class="more-btn" data-more aria-expanded="false" aria-controls="more-professor"><span class="lbl">Read more — syllabus, outreach &amp; hackathons</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+              <button class="more-btn" data-more aria-expanded="false" aria-controls="more-professor"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
             </div>
           </div>
           <div class="role-more" id="more-professor" hidden>
@@ -359,7 +278,6 @@
             </div>
           </div>
         </article>
-
         <!-- Exactitude -->
         <article class="role reveal" id="role-exactitude">
           <div class="role-head">
@@ -379,9 +297,7 @@
               <li><b>Seven coordinated agents</b> (LangChain, LangGraph) for content and outreach — outreach 10× (100 → 1,000), AI/data spend from an est. $24–36k to ~$0.</li>
             </ul>
             <div class="role-foot">
-              <button class="more-btn" data-more aria-expanded="false" aria-controls="more-exactitude"><span class="lbl">Read more — by area</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-              <a class="link" href="work/exactitude.html">Case study</a>
-              <a class="link" href="work/exactitude-deep-dive.html">Technical deep dive</a>
+              <button class="more-btn" data-more aria-expanded="false" aria-controls="more-exactitude"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
             </div>
           </div>
           <div class="role-more" id="more-exactitude" hidden>
@@ -429,9 +345,13 @@
                 <li><b>Free-tier LLMs:</b> 10 providers (Gemini, Groq, NVIDIA NIM, Mistral and more) with 33 rotating keys and automatic failover.</li>
               </ul>
             </div>
+            <div class="more-cta">
+              <span class="more-cta-k">Want the full story?</span>
+              <a class="btn btn-primary btn-sm" href="work/exactitude.html">Full case study — architecture, decisions, results →</a>
+              <a class="btn btn-ghost btn-sm" href="work/exactitude-deep-dive.html">Technical deep dive (8 case studies)</a>
+            </div>
           </div>
         </article>
-
         <!-- Project Engineer -->
         <article class="role reveal" id="role-engineer">
           <div class="role-head">
@@ -451,7 +371,6 @@
             </ul>
           </div>
         </article>
-
         <!-- Business Analyst Intern -->
         <article class="role reveal" id="role-intern">
           <div class="role-head">
@@ -472,8 +391,16 @@
           </div>
         </article>
       </div>
+    </div>
+  </section>
 
-      <h3 class="sub-head reveal">Education</h3>
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="num">02</span> Education</span>
+        <h2 class="h-display h2">Civil engineer turned <em>AI engineer</em>.</h2>
+      </div>
       <div class="edu">
         <div class="panel reveal">
           <div class="when">Sep 2024 — Sep 2025 · London, UK</div>
@@ -542,9 +469,8 @@
       <div class="section-head reveal">
         <span class="eyebrow"><span class="num">03</span> Projects</span>
         <h2 class="h-display h2">Systems that <em>reason</em>, then prove it.</h2>
-        <p class="lede">Browse the screenshots with the <b>‹ ›</b> buttons, then open a case study for the full architecture, decisions and results.</p>
+        <p class="lede">Five systems I built end to end. Flip through the screenshots with <b>‹ ›</b>, press <b>See more</b> for the problem, approach, tech stack and impact — or go straight to the full case study.</p>
       </div>
-
       <!-- Wave Engine -->
       <article class="proj reveal" id="p-wave">
         <div class="carousel" data-carousel aria-label="Wave Engine screenshots">
@@ -560,19 +486,24 @@
           <div class="work-meta"><span class="idx">01</span><span>Product</span><span>·</span><span>2026</span><span>·</span><span>Fundamental Labs</span></div>
           <h3 class="proj-title">Wave Engine</h3>
           <p class="proj-one">A local-first AI engineering partner for VS Code that reads your repository before it answers — and checks its own work before you see it.</p>
-          <dl class="pbs">
-            <div><dt>Problem</dt><dd>AI coding tools guess when they can't see your codebase — and send your code to the cloud.</dd></div>
-            <div><dt>Built</dt><dd>A 4-bit Qwen model on your laptop directs 107 specialist agents over a repo knowledge graph; answers are critiqued, confidence-scored and regenerated if weak.</dd></div>
-            <div><dt>Impact</dt><dd>767 Marketplace downloads, 30+ active users · ~40s → 5s responses · runs offline, no API key.</dd></div>
-          </dl>
-          <div class="chip-row"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">llama.cpp</span><span class="chip">TypeScript</span><span class="chip">Knowledge graph</span></div>
+          <div class="work-stats proj-stats"><div><b>107</b><span>specialist agents</span></div><div><b>767</b><span>Marketplace downloads</span></div><div><b>~40s→5s</b><span>response time</span></div></div>
           <div class="proj-actions">
-            <a class="btn btn-primary btn-sm" href="work/wave-engine.html">Read the case study →</a>
+            <button class="more-btn" data-more aria-expanded="false" aria-controls="pm-p-wave"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <a class="btn btn-primary btn-sm" href="work/wave-engine.html">Full case study →</a>
             <a class="btn btn-ghost btn-sm" href="https://marketplace.visualstudio.com/items?itemName=FundamentalLabs.mas-agent" target="_blank" rel="noopener">Marketplace ↗</a>
           </div>
         </div>
+        <div class="proj-more" id="pm-p-wave" hidden>
+          <dl class="pbs pbs-wide">
+            <div><dt>Problem</dt><dd>AI coding tools guess when they can't see your codebase — and send your code to the cloud.</dd></div>
+            <div><dt>Approach</dt><dd>A 4-bit Qwen model on your laptop directs 107 specialist agents over a repo knowledge graph; answers are critiqued, confidence-scored and regenerated if weak.</dd></div>
+            <div><dt>Impact</dt><dd>767 Marketplace downloads, 30+ active users · ~40s → 5s responses · runs offline, no API key.</dd></div>
+            <div><dt>Tech stack</dt><dd>Python 3.12 · FastAPI · llama.cpp (Qwen2.5-Coder-3B, 4-bit) · SQLite · TypeScript VS Code extension</dd></div>
+            <div><dt>My role</dt><dd>Sole engineer and founder (Fundamental Labs) — architecture, backend, extension, 106 releases.</dd></div>
+          </dl>
+          <div class="more-cta"><span class="more-cta-k">In depth</span><a class="btn btn-primary btn-sm" href="work/wave-engine.html">Read the full case study — architecture, decisions, results →</a></div>
+        </div>
       </article>
-
       <!-- Guardian -->
       <article class="proj flip reveal" id="p-guardian">
         <div class="carousel" data-carousel aria-label="Guardian screenshots">
@@ -587,18 +518,23 @@
           <div class="work-meta"><span class="idx">02</span><span>Security platform</span><span>·</span><span>2025–26</span><span>·</span><span>Fundamental Labs</span></div>
           <h3 class="proj-title">Guardian</h3>
           <p class="proj-one">External attack-surface intelligence for banks — see your infrastructure the way an attacker does, and find the weak points first.</p>
-          <dl class="pbs">
-            <div><dt>Problem</dt><dd>Banks find expired certificates, weak ciphers and forgotten endpoints only after a breach or an audit.</dd></div>
-            <div><dt>Built</dt><dd>A six-layer deterministic pipeline: 44 discovery modules → protocol fingerprints → trust graph → weakness detection → prediction → analyst console with an attack simulator.</dd></div>
-            <div><dt>Impact</dt><dd>960-node, 1,764-edge trust graph · full scan cycle in 6m 43s · presented at IDBI Innovate 2026.</dd></div>
-          </dl>
-          <div class="chip-row"><span class="chip">Python</span><span class="chip">PostgreSQL</span><span class="chip">React</span><span class="chip">TLS / PKI</span><span class="chip">Graph analytics</span></div>
+          <div class="work-stats proj-stats"><div><b>44</b><span>discovery modules</span></div><div><b>960</b><span>node trust graph</span></div><div><b>6m 43s</b><span>full scan cycle</span></div></div>
           <div class="proj-actions">
-            <a class="btn btn-primary btn-sm" href="work/guardian.html">Read the case study →</a>
+            <button class="more-btn" data-more aria-expanded="false" aria-controls="pm-p-guardian"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <a class="btn btn-primary btn-sm" href="work/guardian.html">Full case study →</a>
           </div>
         </div>
+        <div class="proj-more" id="pm-p-guardian" hidden>
+          <dl class="pbs pbs-wide">
+            <div><dt>Problem</dt><dd>Banks find expired certificates, weak ciphers and forgotten endpoints only after a breach or an audit.</dd></div>
+            <div><dt>Approach</dt><dd>A six-layer deterministic pipeline: 44 discovery modules → protocol fingerprints → trust graph → weakness detection → prediction → analyst console with an attack simulator.</dd></div>
+            <div><dt>Impact</dt><dd>960-node, 1,764-edge trust graph · full scan cycle in 6m 43s · presented at IDBI Innovate 2026.</dd></div>
+            <div><dt>Tech stack</dt><dd>Python 3.12 (stdlib-first) · PostgreSQL · React 18 · TypeScript · Vite · Docker</dd></div>
+            <div><dt>My role</dt><dd>Sole technical founder — six-layer pipeline, API, analyst console, attack simulator.</dd></div>
+          </dl>
+          <div class="more-cta"><span class="more-cta-k">In depth</span><a class="btn btn-primary btn-sm" href="work/guardian.html">Read the full case study — architecture, decisions, results →</a></div>
+        </div>
       </article>
-
       <!-- Exactitude -->
       <article class="proj reveal" id="p-exactitude">
         <div class="carousel" data-carousel aria-label="Exactitude Consultancy screenshots">
@@ -613,20 +549,25 @@
           <div class="work-meta"><span class="idx">03</span><span>Client work</span><span>·</span><span>2026</span><span>·</span><span>Exactitude Consultancy</span></div>
           <h3 class="proj-title">Market-intelligence platform</h3>
           <p class="proj-one">Data, AI automation and infrastructure for a live market-research site with 30,000+ reports — on a near-zero API budget.</p>
-          <dl class="pbs">
-            <div><dt>Problem</dt><dd>Stale and inconsistent figures, slow pages, silently failing enquiry e-mails and fully manual content.</dd></div>
-            <div><dt>Built</dt><dd>Verification pipelines, a 103,736-company directory from official registers, edge caching, and seven agents with human approval.</dd></div>
-            <div><dt>Impact</dt><dd>22,000+ figures corrected · 909 → 1 ms · ~$0 AI spend · outreach 10×.</dd></div>
-          </dl>
-          <div class="chip-row"><span class="chip">LangGraph</span><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Cloudflare</span></div>
+          <div class="work-stats proj-stats"><div><b>22,000+</b><span>figures corrected</span></div><div><b>909→1 ms</b><span>homepage load</span></div><div><b>~$0</b><span>AI spend</span></div></div>
           <div class="proj-actions">
-            <a class="btn btn-primary btn-sm" href="work/exactitude.html">Read the case study →</a>
+            <button class="more-btn" data-more aria-expanded="false" aria-controls="pm-p-exactitude"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <a class="btn btn-primary btn-sm" href="work/exactitude.html">Full case study →</a>
             <a class="btn btn-ghost btn-sm" href="work/exactitude-deep-dive.html">Deep dive</a>
             <a class="btn btn-ghost btn-sm" href="https://exactitudeconsultancy.com/" target="_blank" rel="noopener">Live site ↗</a>
           </div>
         </div>
+        <div class="proj-more" id="pm-p-exactitude" hidden>
+          <dl class="pbs pbs-wide">
+            <div><dt>Problem</dt><dd>Stale and inconsistent figures, slow pages, silently failing enquiry e-mails and fully manual content.</dd></div>
+            <div><dt>Approach</dt><dd>Verification pipelines, a 103,736-company directory from official registers, edge caching, and seven agents with human approval.</dd></div>
+            <div><dt>Impact</dt><dd>22,000+ figures corrected · 909 → 1 ms · ~$0 AI spend · outreach 10×.</dd></div>
+            <div><dt>Tech stack</dt><dd>Python 3 · LangGraph / LangChain · PHP 8 · MySQL 8 · Apache · Cloudflare · GitHub Actions</dd></div>
+            <div><dt>My role</dt><dd>Independent consultant; sole engineer for data, AI and infrastructure.</dd></div>
+          </dl>
+          <div class="more-cta"><span class="more-cta-k">In depth</span><a class="btn btn-primary btn-sm" href="work/exactitude.html">Read the full case study — architecture, decisions, results →</a></div>
+        </div>
       </article>
-
       <!-- NexusRAG -->
       <article class="proj flip reveal" id="p-nexusrag">
         <div class="carousel" data-carousel aria-label="NexusRAG screenshots">
@@ -640,19 +581,24 @@
           <div class="work-meta"><span class="idx">04</span><span>Open source</span><span>·</span><span>2026</span></div>
           <h3 class="proj-title">NexusRAG</h3>
           <p class="proj-one">A self-hostable retrieval platform with evidence built in — hybrid search, inline citations, and a system that would rather abstain than guess.</p>
-          <dl class="pbs">
-            <div><dt>Problem</dt><dd>“Chat with your PDFs” demos miss exact terms and answer confidently without evidence.</dd></div>
-            <div><dt>Built</dt><dd>Postgres full-text + pgvector retrieval (50 + 50), reciprocal-rank fusion, re-ranking to 10, an abstention gate, a citation validator and 4-provider failover.</dd></div>
-            <div><dt>Impact</dt><dd>Every answer is cited or abstains · 160 automated tests · one database holds both indexes.</dd></div>
-          </dl>
-          <div class="chip-row"><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">pgvector</span><span class="chip">Next.js</span></div>
+          <div class="work-stats proj-stats"><div><b>50 + 50</b><span>candidates fused</span></div><div><b>4</b><span>LLM providers in failover</span></div><div><b>160</b><span>tests</span></div></div>
           <div class="proj-actions">
-            <a class="btn btn-primary btn-sm" href="work/nexusrag.html">Read the case study →</a>
+            <button class="more-btn" data-more aria-expanded="false" aria-controls="pm-p-nexusrag"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <a class="btn btn-primary btn-sm" href="work/nexusrag.html">Full case study →</a>
             <a class="btn btn-ghost btn-sm" href="https://github.com/ADITYATALEKAR/NexusRAG" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </div>
+        <div class="proj-more" id="pm-p-nexusrag" hidden>
+          <dl class="pbs pbs-wide">
+            <div><dt>Problem</dt><dd>“Chat with your PDFs” demos miss exact terms and answer confidently without evidence.</dd></div>
+            <div><dt>Approach</dt><dd>Postgres full-text + pgvector retrieval (50 + 50), reciprocal-rank fusion, re-ranking to 10, an abstention gate, a citation validator and 4-provider failover.</dd></div>
+            <div><dt>Impact</dt><dd>Every answer is cited or abstains · 160 automated tests · one database holds both indexes.</dd></div>
+            <div><dt>Tech stack</dt><dd>Python 3.11 · FastAPI · PostgreSQL + pgvector · Next.js 14 · Docker · Cloudflare Pages · Koyeb · Neon</dd></div>
+            <div><dt>My role</dt><dd>Solo — architecture, backend, frontend, deployment.</dd></div>
+          </dl>
+          <div class="more-cta"><span class="more-cta-k">In depth</span><a class="btn btn-primary btn-sm" href="work/nexusrag.html">Read the full case study — architecture, decisions, results →</a></div>
+        </div>
       </article>
-
       <!-- EnergyNexus -->
       <article class="proj reveal" id="p-energy">
         <div class="carousel" data-carousel aria-label="EnergyNexus result charts">
@@ -667,16 +613,22 @@
           <div class="work-meta"><span class="idx">05</span><span>MSc dissertation</span><span>·</span><span>2025</span><span>·</span><span>QMUL</span></div>
           <h3 class="proj-title">EnergyNexus</h3>
           <p class="proj-one">Deep-learning forecasts of energy demand, electricity price and wind generation at 1, 6 and 24-hour horizons.</p>
-          <dl class="pbs">
-            <div><dt>Problem</dt><dd>City-scale energy data is locked behind regulation, privacy rules and corporate confidentiality.</dd></div>
-            <div><dt>Built</dt><dd>A synthetic London generator (1.05M rows × 125 features), a CNN-BiLSTM-attention demand model transferred to price, and a wavelet-LSTM on real German wind data.</dd></div>
-            <div><dt>Impact</dt><dd>R² 95.9% demand · 93.1% wind · 70.3% price · MSc with Distinction.</dd></div>
-          </dl>
-          <div class="chip-row"><span class="chip">TensorFlow</span><span class="chip">CNN-LSTM</span><span class="chip">Wavelets</span><span class="chip">Synthetic data</span></div>
+          <div class="work-stats proj-stats"><div><b>95.9%</b><span>R² demand</span></div><div><b>93.1%</b><span>R² wind</span></div><div><b>70.3%</b><span>R² price</span></div></div>
           <div class="proj-actions">
-            <a class="btn btn-primary btn-sm" href="work/energynexus.html">Read the case study →</a>
-            <a class="btn btn-ghost btn-sm" href="assets/docs/Aditya_Talekar_MSc_Dissertation.pdf" target="_blank" rel="noopener">Dissertation PDF ↗</a>
+            <button class="more-btn" data-more aria-expanded="false" aria-controls="pm-p-energy"><span class="lbl">See more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <a class="btn btn-primary btn-sm" href="work/energynexus.html">Full case study →</a>
+            <a class="btn btn-ghost btn-sm" href="assets/docs/Aditya_Talekar_MSc_Dissertation.pdf">Dissertation PDF ↗</a>
           </div>
+        </div>
+        <div class="proj-more" id="pm-p-energy" hidden>
+          <dl class="pbs pbs-wide">
+            <div><dt>Problem</dt><dd>City-scale energy data is locked behind regulation, privacy rules and corporate confidentiality.</dd></div>
+            <div><dt>Approach</dt><dd>A synthetic London generator (1.05M rows × 125 features), a CNN-BiLSTM-attention demand model transferred to price, and a wavelet-LSTM on real German wind data.</dd></div>
+            <div><dt>Impact</dt><dd>R² 95.9% demand · 93.1% wind · 70.3% price · MSc with Distinction.</dd></div>
+            <div><dt>Tech stack</dt><dd>Python · TensorFlow / Keras · PyWavelets · pandas · scikit-learn</dd></div>
+            <div><dt>My role</dt><dd>Sole author — synthetic data generator, three models, evaluation, dissertation.</dd></div>
+          </dl>
+          <div class="more-cta"><span class="more-cta-k">In depth</span><a class="btn btn-primary btn-sm" href="work/energynexus.html">Read the full case study — architecture, decisions, results →</a></div>
         </div>
       </article>
     </div>
@@ -735,7 +687,7 @@
   <section class="section" id="skills">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow"><span class="num">05</span> Toolkit</span>
+        <span class="eyebrow"><span class="num">05</span> Skills</span>
         <h2 class="h-display h2">What I <em>reach for</em>.</h2>
       </div>
       <div class="skills reveal">
@@ -757,6 +709,18 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section class="section" id="moments" aria-label="Events">
+    <div class="wrap">
+      <div class="moments-head reveal"><span class="eyebrow">In the room</span><p class="muted">Learning from the teams building the tools I use.</p></div>
+      <div class="moments">
+        <figure class="moment reveal"><img src="assets/img/event-ibm-quantum-2.webp" alt="Aditya standing beside IBM Quantum System One" width="960" height="1200" loading="lazy" data-zoom><figcaption>IBM Quantum System One</figcaption></figure>
+        <figure class="moment reveal" data-delay="1"><img src="assets/img/event-aws-genai.webp" alt="Aditya at the registration desk of AWS GenAI and Data Day" width="960" height="1200" loading="lazy" data-zoom><figcaption>AWS GenAI &amp; Data Day</figcaption></figure>
+        <figure class="moment reveal" data-delay="2"><img src="assets/img/event-datastax.webp" alt="A DataStax speaker presenting Langflow on stage" width="900" height="1125" loading="lazy" data-zoom><figcaption>DataStax · Langflow session</figcaption></figure>
+        <figure class="moment reveal" data-delay="3"><img src="assets/img/event-ibm-quantum.webp" alt="Aditya beside the IBM Quantum System One display at IBM" width="960" height="1200" loading="lazy" data-zoom><figcaption>Visiting IBM</figcaption></figure>
+      </div>
     </div>
   </section>
 
@@ -795,6 +759,7 @@
       <p class="muted reveal" style="margin-top:18px;font-size:14.5px">Based in Kolhapur, India · IST (UTC+5:30) · Try Wave Engine on the <a href="https://marketplace.visualstudio.com/items?itemName=FundamentalLabs.mas-agent" target="_blank" rel="noopener">VS Code Marketplace</a>.</p>
     </div>
   </section>
+  <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 </main>
 
 <footer class="footer">
