@@ -1,118 +1,39 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guardian — external attack-surface intelligence for banks — Aditya Talekar</title>
-  <meta name="description" content="Case study: Guardian discovers a bank's internet-facing estate from one domain, fingerprints every endpoint at protocol level, builds a trust graph and predicts which weaknesses will escalate.">
+  <title>Guardian — Aditya Talekar</title>
+  <meta name="description" content="External attack-surface intelligence for banks — see your infrastructure the way an attacker does, and find the weak points first.">
   <meta name="author" content="Aditya Talekar">
   <link rel="canonical" href="https://adityatalekar.github.io/work/guardian.html">
-  <meta name="theme-color" content="#f7f6f2">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Guardian — external attack-surface intelligence for banks — Aditya Talekar">
-  <meta property="og:description" content="Case study: Guardian discovers a bank's internet-facing estate from one domain, fingerprints every endpoint at protocol level, builds a trust graph and predicts which weaknesses will escalate.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Guardian — Aditya Talekar">
+  <meta property="og:description" content="External attack-surface intelligence for banks — see your infrastructure the way an attacker does, and find the weak points first.">
   <meta property="og:url" content="https://adityatalekar.github.io/work/guardian.html">
   <meta property="og:image" content="https://adityatalekar.github.io/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,0..100;1,9..144,400..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body data-base="../">
 <a class="skip" href="#main">Skip to content</a>
-<div class="progress" aria-hidden="true"></div>
-
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="../index.html" aria-label="Aditya Talekar — home">
-      <span class="brand-mark" aria-hidden="true">A</span>
-      <span class="brand-name">Aditya Talekar <span>· AI Engineer</span></span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#education">Education</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#skills">Skills</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-    <div class="nav-tools">
-      <button class="cmdk-btn" data-cmdk aria-label="Open command menu">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span class="label">Search</span><kbd><span data-mod>Ctrl</span> K</kbd>
-      </button>
-      <button class="btn btn-primary btn-sm" data-resume>Résumé</button>
-      <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-  <div class="wrap"><a class="back-btn" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to all projects</a></div>
-  <article>
-    <header class="cs-hero">
-      <div class="wrap">
-        <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span aria-hidden="true">/</span><span>Guardian</span></nav>
-        <h1 class="cs-title">Guard<em>ian</em></h1>
-        <p class="cs-sub">External attack-surface intelligence for banks — see your infrastructure the way an attacker does, and find the weak points first.</p>
-        <dl class="cs-facts">
-          <div><dt>Role</dt><dd>Sole technical founder, Fundamental Labs — architecture, backend, frontend</dd></div>
-          <div><dt>Timeline</dt><dd>Oct 2025 — 2026<br>5+ months full-time</dd></div>
-          <div><dt>Stack</dt><dd>Python 3.12 · PostgreSQL · React 18 · TypeScript · Docker</dd></div>
-          <div><dt>Shown at</dt><dd>IDBI Innovate 2026<br><span class="muted">IDBI Bank hackathon</span></dd></div>
-        </dl>
-        <dl class="glance"><div><dt>Problem</dt><dd>Banks find exposed, misconfigured or quantum-vulnerable endpoints only after a breach or an audit.</dd></div><div><dt>Solution</dt><dd>A deterministic six-layer pipeline from discovery to prediction, with a trust graph and an attack simulator.</dd></div><div><dt>Impact</dt><dd>960-node trust graph · full cycle in 6m 43s · 271 tests · presented at IDBI Innovate 2026.</dd></div><div><dt>My role</dt><dd>Sole technical founder — architecture, backend, frontend.</dd></div></dl>
-        <figure class="cs-cover cs-video"><video controls muted playsinline preload="metadata" poster="../assets/img/guardian-demo-poster.webp" width="1280" height="560"><source src="../assets/video/guardian-demo.mp4" type="video/mp4">Your browser can't play this video. <a href="../assets/video/guardian-demo.mp4">Download it</a> instead.</video><figcaption>▶ 40-second product demo: the risk dashboard after a scan, predictive alerts with narrative assessment, and the attack simulator. Identifying details removed.</figcaption></figure>
-      </div>
-    </header>
-
-    <div class="wrap cs-body">
-      <aside class="toc" aria-label="On this page">
-        <p>On this page</p>
-        <ol>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#problem">The problem</a></li>
-          <li><a href="#architecture">Architecture</a></li>
-          <li><a href="#cycle">A scan cycle</a></li>
-          <li><a href="#graph">The trust graph</a></li>
-          <li><a href="#decisions">Key decisions</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#next">What's next</a></li>
-        </ol>
-      </aside>
-
-      <div class="prose">
-        <section id="overview">
-          <h2><span class="n">01 — Overview</span>Continuous, evidence-backed visibility — from the outside in.</h2>
-          <p>Banks run thousands of internet-facing endpoints — websites, APIs, mail servers, CDN edges, cloud buckets, legacy portals — and they change every week. Most institutions only discover an expired certificate, a weak cipher or a forgotten subdomain during a breach or a regulator's visit.</p>
-          <p>Guardian starts from a single seed domain and does what an attacker's reconnaissance would: <strong>discovers the full external estate, measures how every endpoint behaves at the protocol level, maps how systems trust each other, and predicts which weaknesses will escalate</strong>. It needs no agents and no internal access — only publicly observable metadata — and it never sends payloads or attempts authentication.</p>
-          <div class="stat-grid">
-            <div class="stat accent"><b data-count="44">44</b><span>discovery modules, passive and active</span></div>
-            <div class="stat"><b data-count="24">24</b><span>protocol fingerprint types per endpoint</span></div>
-            <div class="stat"><b>960</b><span>node trust graph with 1,764 relationships</span></div>
-            <div class="stat"><b>~71K</b><span>lines of Python, stdlib-first</span></div>
-            <div class="stat"><b data-count="271">271</b><span>tests, including determinism suites</span></div>
-            <div class="stat"><b>29</b><span>regulatory jurisdictions in the compliance catalogue</span></div>
-          </div>
-        </section>
-
-        <section id="problem">
-          <h2><span class="n">02 — The problem</span>Infrastructure evolves faster than security monitoring.</h2>
-          <div class="decisions">
-            <div class="decision"><span class="n">01</span><div><h4>Forgotten systems</h4><p>Subdomains, legacy servers and abandoned endpoints stay exposed long after anyone remembers they exist.</p></div></div>
-            <div class="decision"><span class="n">02</span><div><h4>Silent cryptographic failure</h4><p>Expired certificates, weak ciphers and quantum-vulnerable keys sit undetected — and “harvest-now, decrypt-later” means today's traffic is tomorrow's breach.</p></div></div>
-            <div class="decision"><span class="n">03</span><div><h4>Hidden trust relationships</h4><p>Shared certificates and dependencies mean one weak system can compromise others that look healthy in isolation.</p></div></div>
-            <div class="decision"><span class="n">04</span><div><h4>Snapshots, not history</h4><p>Traditional scanners produce periodic inventories and lose cycle history, so nobody can say what changed, when, or whether risk is rising.</p></div></div>
-          </div>
-        </section>
-
-        <section id="architecture">
-          <h2><span class="n">03 — Architecture</span>Six layers, each with one job and hard boundaries.</h2>
-          <p>Discovery feeds a stack of analytical layers. Each layer can only depend on the ones below it, and the boundaries are enforced in code: Layer 0 performs no I/O beyond observation, and Layer 3 is forbidden from reading the wall clock, so results are reproducible.</p>
-          <div class="diagram-wrap wide" role="img" aria-label="Guardian architecture. Discovery column: seed domain, 15 passive modules, 29 active modules, explore-then-exploit budget, cycle orchestrator. Analytical stack from bottom: Layer 0 observation, Layer 1 trust graph, Layer 2 weakness detection, Layer 3 prediction and memory, Layer 4 Guardian decision, Layer 5 interface. Storage: PostgreSQL or atomic filesystem store.">
+<header class="topbar"><div class="in">
+  <a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to portfolio</a>
+  <span class="who">Aditya Talekar · AI Engineer</span>
+  <button class="btn btn-primary" data-doc="resume" style="height:36px">Résumé</button>
+</div></header>
+<main class="page" id="main">
+  <div class="page-kind">Project</div>
+  <h1>Guardian</h1>
+  <p class="page-sub">External attack-surface intelligence for banks — see your infrastructure the way an attacker does, and find the weak points first.</p>
+  <dl class="facts"><div><dt>Role</dt><dd>Sole technical founder, Fundamental Labs</dd></div><div><dt>Timeline</dt><dd>Oct 2025 – 2026</dd></div><div><dt>Stack</dt><dd>Python 3.12 · PostgreSQL · React · TypeScript</dd></div><div><dt>Shown at</dt><dd>IDBI Innovate 2026<br><span style="color:var(--muted)">IDBI Bank hackathon</span></dd></div></dl>
+  <div class="results"><div class="result"><b>44</b><span>discovery modules, passive and active</span></div><div class="result"><b>184</b><span>related assets found from one domain</span></div><div class="result"><b>6m 43s</b><span>for a complete scan cycle</span></div><div class="result"><b>960</b><span>node trust graph with 1,764 relationships</span></div></div>
+  <nav class="jump" aria-label="On this page"><a href="#screens">Screenshots</a><a href="#the-problem">The problem</a><a href="#what-i-built">What I built</a><a href="#tech-stack">Tech stack</a><a href="#impact">Impact</a><a href="#what-i-learned">What I learned</a></nav>
+  <div class="block" id="screens"><h2>Screenshots</h2><div class="carousel" aria-label="Screenshots"><div class="carousel-track"><figure class="slide"><video controls muted playsinline preload="metadata" poster="../assets/img/guardian-demo-poster.webp" width="1280" height="560"><source src="../assets/video/guardian-demo.mp4" type="video/mp4"></video><figcaption>▶ 40-second demo: dashboard, alerts and attack simulator</figcaption></figure><figure class="slide"><img src="../assets/img/guardian-dashboard.webp" alt="Risk dashboard after a scan" width="1800" height="1011" loading="lazy"><figcaption>Risk dashboard after a completed scan</figcaption></figure><figure class="slide"><img src="../assets/img/guardian-graph.webp" alt="Trust graph shown as six districts" width="1800" height="1207" loading="lazy"><figcaption>Trust graph — districts, roads and buildings</figcaption></figure><figure class="slide"><img src="../assets/img/guardian-landing.webp" alt="Guardian sign-in page" width="1800" height="988" loading="lazy"><figcaption>Sign-in page</figcaption></figure></div></div></div>
+  <section class="block prose" id="the-problem"><h2><span class="n">01</span>The problem</h2><p>Banks run thousands of internet-facing endpoints — websites, APIs, mail servers, CDN edges, cloud buckets — and they change every week. Most institutions only discover an expired certificate, a weak cipher or a forgotten subdomain during a breach or an audit.</p><ul class="bullets"><li><b>Forgotten systems</b> stay exposed long after anyone remembers them.</li><li><b>Cryptographic weaknesses fail silently</b> — and quantum-vulnerable keys mean today’s traffic can be decrypted later.</li><li><b>Hidden trust relationships</b> let one weak system compromise others that look healthy.</li><li><b>Scanners give snapshots, not history</b>, so nobody can say what changed or whether risk is rising.</li></ul></section><section class="block prose" id="what-i-built"><h2><span class="n">02</span>What I built</h2><p>From a single seed domain, Guardian does what an attacker’s reconnaissance would — but <b>deterministically and without payloads or login attempts</b>. It discovers the estate, fingerprints every endpoint at protocol level, builds a trust graph, detects weaknesses, predicts which will escalate, and gives analysts a console with an attack simulator.</p><div class="diagram-wrap wide" role="img" aria-label="Guardian architecture. Discovery column: seed domain, 15 passive modules, 29 active modules, explore-then-exploit budget, cycle orchestrator. Analytical stack from bottom: Layer 0 observation, Layer 1 trust graph, Layer 2 weakness detection, Layer 3 prediction and memory, Layer 4 Guardian decision, Layer 5 interface. Storage: PostgreSQL or atomic filesystem store.">
             <svg viewBox="0 0 960 570" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="ga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker>
@@ -140,122 +61,9 @@
               <path d="M635 456v32" class="d-edge"/>
             </svg>
           </div>
-          <p class="diagram-cap">Discovery (left) feeds an analytical stack (right) that only depends downward. Swap PostgreSQL for the filesystem store with one environment variable.</p>
-
-          <h3>Discovery module inventory</h3>
-          <div class="inventory">
-            <div><h4>Category A — passive (15)</h4><p>TLS SANs and recursive SAN chains, certificate-transparency logs, A/AAAA/CNAME/MX/NS/TXT records, SPF includes, reverse DNS, passive DNS, name mutation and ASN/RDAP lookups.</p></div>
-            <div><h4>Active surface</h4><p>Port scanning, TLS on alternate ports, banners, HTTP probes, a bounded crawler, JavaScript and OpenAPI analysis, response signatures and TLS server fingerprints.</p></div>
-            <div><h4>Infrastructure &amp; cloud</h4><p>Neighbouring and shared-IP correlation, netblocks, JARM, CDN edges, S3/Azure/GCP buckets, CloudFront and Kubernetes patterns.</p></div>
-            <div><h4>History &amp; confidence</h4><p>Revived, expired and orphaned assets; favicon hashes and wildcard coverage; volatility; conflict detection, issuer clustering and global confidence recalibration.</p></div>
-          </div>
-
-          <h3>What each layer does</h3>
-          <ul>
-            <li><strong>Observation.</strong> Legal, protocol-level measurements of each endpoint — handshake structure, certificate shape, timing jitter and entropy — turned into 24 deterministic fingerprints and 10 “physics” signals such as drift, oscillation and decay.</li>
-            <li><strong>Trust graph.</strong> Endpoints, sessions, identities, trust material and evidence, linked by 11 edge types from <code>depends_on</code> to <code>issued_by</code>, with deterministic path enumeration.</li>
-            <li><strong>Weakness detection.</strong> Six detectors fused into clusters like <em>instability</em>, <em>negotiation disruption</em> and <em>cross-axis degradation</em>.</li>
-            <li><strong>Prediction &amp; memory.</strong> Bounded per-entity learning state (EWMA α = 0.30, absence decay 0.85) emits predictions up to 90 days out.</li>
-            <li><strong>Decision.</strong> An 8-phase campaign model — stable, recon, probe, escalation, structural stress, persistent pressure, recovery, transitional — with hysteresis so alerts don't flap.</li>
-            <li><strong>Posture &amp; compliance.</strong> TLS, certificate, HSTS, revocation, WAF and post-quantum findings mapped to controls in PCI-DSS v4.0, RBI guidance and NIST IR 8413.</li>
-          </ul>
-        </section>
-
-        <section id="cycle">
-          <h2><span class="n">04 — A scan cycle</span>Every finding is tied to a cycle, a stage and evidence.</h2>
-          <ol>
-            <li><strong>Initialise</strong> — sync policy, load the per-tenant Layer 0 baseline.</li>
-            <li><strong>Discover</strong> — passive expansion first, then active; each category gets an exploration pass, and only modules that proved productive get the exploitation pass.</li>
-            <li><strong>Snapshot</strong> — build the snapshot and diff against the last one, sealed with a SHA-256 hash.</li>
-            <li><strong>Temporal update</strong> — record presence, TLS, port and certificate changes over time.</li>
-            <li><strong>Trust-graph replay</strong> — apply the graph delta and persist a graph snapshot.</li>
-            <li><strong>Evaluate</strong> — run Layers 2 → 3 → 4 per entity, then policy patterns.</li>
-            <li><strong>Persist</strong> — write artefacts; on failure, salvage whatever stages completed.</li>
-          </ol>
-          <p>The whole cycle runs under a 600-second budget checked at every stage, with a cycle lock and progress heartbeats so a crashed worker can be detected and recovered.</p>
-        </section>
-
-        <section id="graph">
-          <h2><span class="n">05 — The trust graph</span>Districts, roads and buildings.</h2>
-          <p>Raw graphs of a bank's estate are unreadable hairballs. I designed the console to render the trust graph as a <strong>city</strong>: districts for cloud services, CDN/edge, security vendors, email, infrastructure and evidence; buildings for nodes; roads for dependencies. Analysts can switch to a route mode and click two nodes to trace the shortest structural path between them — the blast radius made visible.</p>
-          <figure class="figure"><div class="frame"><img src="../assets/img/guardian-graph.webp" alt="Guardian trust graph rendered as six coloured districts: cloud services, CDN and edge, security vendors, email services, infrastructure and evidence, with node counts" loading="lazy" width="1800" height="1207"></div><figcaption><b>A</b>Trust graph, district view — 943 nodes across six districts from one scan.</figcaption></figure>
-          <p>A built-in <strong>attack simulator</strong> injects five scenarios — compromised endpoint, certificate compromise, coordinated entropy spike, structural lateral movement and persistent low-signal exfiltration — re-runs the pipeline in a sandbox, and reports blast radius, ranked attack paths and the top mitigations.</p>
-        </section>
-
-        <section id="decisions">
-          <h2><span class="n">06 — Key decisions</span>Bank-grade means boring, repeatable and auditable.</h2>
-          <div class="decisions">
-            <div class="decision"><span class="n">01</span><div><h4>Determinism as a feature</h4><p>Same input, same output — always. Even retry jitter is derived from a SHA-256 of endpoint + attempt rather than a random number, and determinism tests guard the trust graph. Auditors can replay any finding.</p></div></div>
-            <div class="decision"><span class="n">02</span><div><h4>Explore, then exploit</h4><p>Discovery is budgeted like a bandit: 30-second slices per module, then extra time only for modules that found something. Hard caps (250K nodes, 500K edges) keep a cycle bounded on any estate.</p></div></div>
-            <div class="decision"><span class="n">03</span><div><h4>Observe, never attack</h4><p>No payloads, no auth attempts. A language guard even rejects findings phrased as “bypass”, “evade” or “exploit”, keeping output defensive and fit for a bank's governance review.</p></div></div>
-            <div class="decision"><span class="n">04</span><div><h4>A tiny supply chain</h4><p>The backend is standard-library Python plus three dependencies (gunicorn, psycopg2, optional curl_cffi). Less to audit, less to break — a real selling point for a security buyer.</p></div></div>
-            <div class="decision"><span class="n">05</span><div><h4>Resilient to the real internet</h4><p>A rate controller with circuit breaker and exponential backoff, plus a fallback for bot-challenge pages, keeps scans polite and complete.</p></div></div>
-            <div class="decision"><span class="n">06</span><div><h4>Hardened by default</h4><p>PBKDF2-SHA256 with a dummy-digest check so login timing can't reveal which users exist, constant-time comparisons and tenant isolation.</p></div></div>
-          </div>
-        </section>
-
-        <section id="results">
-          <h2><span class="n">07 — Results</span>Working proof, not a concept.</h2>
-          <p>One demonstration cycle from a single seed domain, as presented at IDBI Innovate 2026:</p>
-          <div class="stat-grid">
-            <div class="stat"><b>184</b><span>related assets discovered</span></div>
-            <div class="stat"><b>54/61</b><span>successful protocol observations</span></div>
-            <div class="stat accent"><b>6m 43s</b><span>for the complete cycle</span></div>
-            <div class="stat"><b>46</b><span>TLS findings</span></div>
-            <div class="stat"><b>49</b><span>WAF findings</span></div>
-            <div class="stat"><b>8</b><span>critical, prioritised for review</span></div>
-          </div>
-          <p>On larger estates a single ~10-minute cycle maps 500+ endpoints — including hidden, internal-facing and third-party-dependency endpoints — work that takes a security team hours to days by hand.</p>
-          <div class="carousel framed" data-carousel aria-label="Guardian screenshots">
-            <div class="carousel-track">
-              <figure class="slide"><img src="../assets/img/guardian-dashboard.webp" alt="Discovery dashboard with findings, severity and drift" loading="lazy" width="1800" height="1011" data-zoom><figcaption>Risk cockpit after a completed cycle — target details removed</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/guardian-graph.webp" alt="Trust graph rendered as six districts" loading="lazy" width="1800" height="1207" data-zoom><figcaption>Trust graph — districts, roads and buildings</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/guardian-landing.webp" alt="Guardian sign-in page" loading="lazy" width="1800" height="988" data-zoom><figcaption>Sign-in — the product story in four lines</figcaption></figure>
-            </div>
-          </div>
-          <p>To take Guardian to market I also built an <strong>autonomous outreach agent</strong> that sourced 2,000+ investor and client leads and sent up to 200 personalised pitch emails a day — business development on autopilot.</p>
-        </section>
-
-        <section id="next">
-          <h2><span class="n">08 — What's next</span>From demo to pilot.</h2>
-          <ul>
-            <li><strong>Pilot on bank-approved scopes</strong> — repeated cycles to measure drift detection on real change.</li>
-            <li><strong>Evidence packs</strong> — exportable, reviewer-friendly artefacts per cycle and endpoint for auditors.</li>
-            <li><strong>Post-quantum migration planning</strong> — deepen readiness scoring into a prioritised migration roadmap.</li>
-            <li><strong>Enterprise hardening</strong> — SSO, tenant controls, observability and production storage.</li>
-          </ul>
-          <div class="callout"><span class="k">A note on ethics</span><p>Guardian observes only publicly visible metadata and is designed for authorised assessments of an organisation's own estate. Screens on this page have target identifiers removed.</p></div>
-        </section>
-      </div>
-    </div>
-  </article>
-  <div class="wrap">
-    <a class="next-proj" href="exactitude.html">
-      <span class="k">Next case study</span>
-      <span class="t">Agentic automation<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-  </div>
-  <a class="to-top" href="#main" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+<p class="diagram-cap">Discovery (left) feeds an analytical stack (right) that only depends downward. Swap PostgreSQL for the filesystem store with one environment variable.</p><h3>The six layers</h3><ul class="bullets"><li><b>Observation:</b> DNS, TCP, TLS and HTTP measurements turned into 24 fingerprints and 10 “physics” signals such as drift and jitter.</li><li><b>Trust graph:</b> endpoints, identities, certificates and evidence linked by 11 relationship types.</li><li><b>Weakness detection:</b> six detectors fused into clusters like “negotiation disruption”.</li><li><b>Prediction &amp; memory:</b> per-endpoint learning state with predictions up to 90 days out.</li><li><b>Decision:</b> an 8-phase campaign model (stable → recon → probe → escalation…) with hysteresis so alerts don’t flap.</li><li><b>Interface:</b> a React console with dashboards, endpoint drill-downs, the trust graph and an attack simulator.</li></ul><h3>Key engineering decisions</h3><ul class="bullets"><li><b>Determinism:</b> same input, same output — even retry jitter comes from a hash — so auditors can replay any finding.</li><li><b>Explore, then exploit:</b> every discovery module gets a 30-second slice; only productive ones get more time, with hard caps on graph size.</li><li><b>Observe, never attack:</b> no payloads, no authentication attempts; findings are written in defensive language for a bank’s governance review.</li><li><b>Tiny supply chain:</b> standard-library Python plus three dependencies — less to audit, less to break.</li><li><b>Compliance mapping:</b> TLS, certificate, WAF and post-quantum findings mapped to PCI-DSS v4.0, RBI guidance and NIST IR 8413.</li></ul></section><section class="block prose" id="tech-stack"><h2><span class="n">03</span>Tech stack</h2><table class="stack"><tbody><tr><th>Backend</th><td>Python 3.12 (stdlib-first), gunicorn, PostgreSQL (17 tables) or an atomic filesystem store</td></tr><tr><th>Frontend</th><td>React 18, TypeScript, Vite, Zustand, Tailwind — 21 analyst pages</td></tr><tr><th>Infrastructure</th><td>Docker, Render, Vercel</td></tr><tr><th>Quality</th><td>271 tests including determinism suites · ~71K lines of Python</td></tr></tbody></table></section><section class="block prose" id="impact"><h2><span class="n">04</span>Impact</h2><ul class="bullets"><li>One demonstration cycle from a single seed domain found <b>184 related assets</b>, made 54 of 61 protocol observations, raised 46 TLS findings and flagged 8 critical — in <b>6 minutes 43 seconds</b>.</li><li>Larger estates map <b>500+ endpoints in about 10 minutes</b> — work that takes a security team hours to days by hand.</li><li>Presented at <b>IDBI Innovate 2026</b> as a working product, not a concept.</li><li>Business development automated with an outreach agent that sourced 2,000+ leads and sent up to 200 personalised e-mails a day.</li></ul></section><section class="block prose" id="what-i-learned"><h2><span class="n">05</span>What I learned</h2><ul class="bullets"><li>For a bank, <b>“boring, repeatable and auditable”</b> beats clever. Determinism became a feature I could sell.</li><li>Good visual metaphors matter: showing the trust graph as a city made a 900-node graph readable for analysts.</li><li>Guardian observes only public metadata and is designed for authorised assessments of an organisation’s own estate. Screens on this page have identifying details removed.</li></ul></section>
+  <a class="next" href="nexusrag.html"><span><small>Next</small><b>NexusRAG</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </main>
-
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <span>© 2026 Aditya Talekar · <a href="../index.html">Home</a> · <a href="mailto:aditya.a.talekar@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/aditya-talekar-48731532a/" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" data-resume>Résumé</a></span>
-    <span>Press <kbd><span data-mod>Ctrl</span> K</kbd> to jump anywhere</span>
-  </div>
-</footer>
-
-<div class="cmdk" role="dialog" aria-modal="true" aria-label="Command menu">
-  <div class="cmdk-panel">
-    <div class="cmdk-input">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="text" placeholder="Search pages, projects, actions…" aria-label="Search" role="combobox" aria-expanded="true" aria-controls="cmdk-list" autocomplete="off" spellcheck="false">
-    </div>
-    <ul class="cmdk-list" id="cmdk-list" role="listbox"></ul>
-    <div class="cmdk-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
-  </div>
-</div>
-<div class="toast" role="status" aria-live="polite"></div>
 <script src="../assets/js/site.js" defer></script>
 </body>
 </html>

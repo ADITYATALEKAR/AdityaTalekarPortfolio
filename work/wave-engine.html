@@ -1,120 +1,39 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wave Engine — a self-correcting multi-agent coding assistant — Aditya Talekar</title>
-  <meta name="description" content="Case study: Wave Engine, a local-first VS Code assistant where a 4-bit Qwen model directs 107 specialist agents over a per-project knowledge graph and verifies every answer before it reaches the user.">
+  <title>Wave Engine — Aditya Talekar</title>
+  <meta name="description" content="A local-first AI coding assistant for VS Code that reads your repository before it answers — and checks its own work before you see it.">
   <meta name="author" content="Aditya Talekar">
   <link rel="canonical" href="https://adityatalekar.github.io/work/wave-engine.html">
-  <meta name="theme-color" content="#f7f6f2">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Wave Engine — a self-correcting multi-agent coding assistant — Aditya Talekar">
-  <meta property="og:description" content="Case study: Wave Engine, a local-first VS Code assistant where a 4-bit Qwen model directs 107 specialist agents over a per-project knowledge graph and verifies every answer before it reaches the user.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wave Engine — Aditya Talekar">
+  <meta property="og:description" content="A local-first AI coding assistant for VS Code that reads your repository before it answers — and checks its own work before you see it.">
   <meta property="og:url" content="https://adityatalekar.github.io/work/wave-engine.html">
   <meta property="og:image" content="https://adityatalekar.github.io/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,0..100;1,9..144,400..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body data-base="../">
 <a class="skip" href="#main">Skip to content</a>
-<div class="progress" aria-hidden="true"></div>
-
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="../index.html" aria-label="Aditya Talekar — home">
-      <span class="brand-mark" aria-hidden="true">A</span>
-      <span class="brand-name">Aditya Talekar <span>· AI Engineer</span></span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#education">Education</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#skills">Skills</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-    <div class="nav-tools">
-      <button class="cmdk-btn" data-cmdk aria-label="Open command menu">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span class="label">Search</span><kbd><span data-mod>Ctrl</span> K</kbd>
-      </button>
-      <button class="btn btn-primary btn-sm" data-resume>Résumé</button>
-      <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-  <div class="wrap"><a class="back-btn" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to all projects</a></div>
-  <article>
-    <header class="cs-hero">
-      <div class="wrap">
-        <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span aria-hidden="true">/</span><span>Wave Engine</span></nav>
-        <h1 class="cs-title">Wave <em>Engine</em></h1>
-        <p class="cs-sub">A local-first AI engineering partner for VS Code that reads your repository before it answers — and checks its own work before you see it.</p>
-        <dl class="cs-facts">
-          <div><dt>Role</dt><dd>Sole engineer &amp; founder, Fundamental Labs</dd></div>
-          <div><dt>Timeline</dt><dd>Jan 2026 — present<br>v0.0.9 → v4.6</dd></div>
-          <div><dt>Stack</dt><dd>Python · FastAPI · llama.cpp · Qwen2.5-Coder · TypeScript</dd></div>
-          <div><dt>Links</dt><dd><a href="https://marketplace.visualstudio.com/items?itemName=FundamentalLabs.mas-agent" target="_blank" rel="noopener">VS Code Marketplace ↗</a><br><span class="muted">Source is private</span></dd></div>
-        </dl>
-        <dl class="glance"><div><dt>Problem</dt><dd>AI coding assistants guess when they can't see your repository — and send your code to the cloud.</dd></div><div><dt>Solution</dt><dd>A local 4-bit model directing 107 specialist agents over a repo knowledge graph, with critique and confidence gating before anything is shown.</dd></div><div><dt>Impact</dt><dd>767 downloads, 30+ active users · ~40s → 5s responses · works fully offline.</dd></div><div><dt>My role</dt><dd>Sole engineer — architecture, Python backend, VS Code extension, releases.</dd></div></dl>
-        <figure class="cs-cover"><img src="../assets/img/wave-architecture.webp" alt="Wave Engine's architecture and health view: a layered dependency graph from client to data and infrastructure" width="1800" height="1304" data-zoom></figure>
-      </div>
-    </header>
-
-    <div class="wrap cs-body">
-      <aside class="toc" aria-label="On this page">
-        <p>On this page</p>
-        <ol>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#problem">The problem</a></li>
-          <li><a href="#architecture">Architecture</a></li>
-          <li><a href="#answer">Anatomy of an answer</a></li>
-          <li><a href="#decisions">Key decisions</a></li>
-          <li><a href="#agents">The 107 agents</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#features">Feature inventory</a></li>
-          <li><a href="#next">What's next</a></li>
-        </ol>
-      </aside>
-
-      <div class="prose">
-        <section id="overview">
-          <h2><span class="n">01 — Overview</span>One small model. A hundred specialists. Every answer checked.</h2>
-          <p>Most AI coding tools are a single large model behind an API key. Wave Engine takes the opposite bet: a <strong>3-billion-parameter model running 4-bit on your own CPU</strong> acts as the “brain”, and a team of deterministic specialist agents does the evidence-gathering — mapping the repo, reading files, tracing architecture, running tests. The model only reasons over what the agents actually found, and its answer is critiqued and confidence-scored before it is shown.</p>
-          <p>It ships as a VS Code extension with a bundled Python backend, works fully offline, and can optionally route to Claude, GPT, Gemini or any OpenAI-compatible endpoint when you want cloud-scale reasoning.</p>
-          <div class="stat-grid">
-            <div class="stat accent"><b data-count="107">107</b><span>specialist agents coordinated by one local model</span></div>
-            <div class="stat"><b>~108K</b><span>lines of Python in the shipped backend</span></div>
-            <div class="stat"><b data-count="864">864</b><span>automated tests in the current build</span></div>
-            <div class="stat"><b data-count="767">767</b><span>Marketplace downloads, 106 releases</span></div>
-            <div class="stat"><b>1.9 GB</b><span>model download — then no API key, ever</span></div>
-            <div class="stat"><b>~40s→5s</b><span>typical response time after caching work</span></div>
-          </div>
-        </section>
-
-        <section id="problem">
-          <h2><span class="n">02 — The problem</span>AI coding help breaks when it can't see the system.</h2>
-          <p>Producing plausible code is easy. The hard part is grounding every answer in the <em>actual</em> repository, keeping the developer in control, and doing it without shipping their code to a third party. I framed the product around three gaps:</p>
-          <div class="decisions">
-            <div class="decision"><span class="n">01</span><div><h4>Context gap</h4><p>Generic assistants miss project structure, entry points, dependencies and prior decisions — so they hallucinate file paths and APIs.</p></div></div>
-            <div class="decision"><span class="n">02</span><div><h4>Trust gap</h4><p>A useful answer needs traceable evidence (real files, real line numbers), verification, and graceful fallbacks when the model isn't sure.</p></div></div>
-            <div class="decision"><span class="n">03</span><div><h4>Delivery gap</h4><p>Teams need a path from prompt → plan → generated files → validation → repair, with a human approving every write.</p></div></div>
-          </div>
-          <p>Add two constraints of my own: it had to <strong>run on an ordinary 8 GB laptop</strong>, and it had to be <strong>free to run</strong> — no per-token cost, no data leaving the machine.</p>
-        </section>
-
-        <section id="architecture">
-          <h2><span class="n">03 — Architecture</span>Deterministic agents gather evidence. The model narrates it.</h2>
-          <p>The extension talks to a FastAPI backend on <code>127.0.0.1</code>. An intent router (Qwen first, rules as a fallback) splits traffic into an <strong>answer path</strong> and a <strong>build path</strong>. Both share the same local model runtime.</p>
-          <div class="diagram-wrap wide" role="img" aria-label="Wave Engine architecture diagram. Editor column: VS Code extension, FastAPI backend, intent router, answer cache, grounded answer, optional cloud models. Answer path: orchestrator with blackboard and capability bidding, specialist agents, answer critic, swarm consensus of two to three Qwen chains, confidence scorer with a retry loop. Build path: agent council of five, execution loop, validated changes. All share a local llama.cpp runtime running Qwen2.5-Coder-3B.">
+<header class="topbar"><div class="in">
+  <a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to portfolio</a>
+  <span class="who">Aditya Talekar · AI Engineer</span>
+  <button class="btn btn-primary" data-doc="resume" style="height:36px">Résumé</button>
+</div></header>
+<main class="page" id="main">
+  <div class="page-kind">Project</div>
+  <h1>Wave Engine</h1>
+  <p class="page-sub">A local-first AI coding assistant for VS Code that reads your repository before it answers — and checks its own work before you see it.</p>
+  <dl class="facts"><div><dt>Role</dt><dd>Sole engineer &amp; founder, Fundamental Labs</dd></div><div><dt>Timeline</dt><dd>Jan 2026 – present<br>v0.0.9 → v4.6</dd></div><div><dt>Stack</dt><dd>Python · FastAPI · llama.cpp · TypeScript</dd></div><div><dt>Links</dt><dd><a href="https://marketplace.visualstudio.com/items?itemName=FundamentalLabs.mas-agent" target="_blank" rel="noopener">VS Code Marketplace ↗</a><br><span style="color:var(--muted)">Source is private</span></dd></div></dl>
+  <div class="results"><div class="result"><b>107</b><span>specialist agents, directed by one local model</span></div><div class="result"><b>767</b><span>Marketplace downloads · 30+ active users</span></div><div class="result"><b>~40s → 5s</b><span>typical response time on a laptop CPU</span></div><div class="result"><b>0</b><span>API keys needed — runs fully offline</span></div></div>
+  <nav class="jump" aria-label="On this page"><a href="#screens">Screenshots</a><a href="#the-problem">The problem</a><a href="#what-i-built">What I built</a><a href="#tech-stack">Tech stack</a><a href="#impact">Impact</a><a href="#what-i-learned">What I learned</a></nav>
+  <div class="block" id="screens"><h2>Screenshots</h2><div class="carousel" aria-label="Screenshots"><div class="carousel-track"><figure class="slide"><img src="../assets/img/wave-architecture.webp" alt="Architecture and health view with a layered dependency graph" width="1800" height="1304" loading="lazy"><figcaption>Architecture &amp; health view</figcaption></figure><figure class="slide"><img src="../assets/img/wave-diagnostics.webp" alt="Diagnostics with health, issues, rules and agent counters" width="1800" height="1248" loading="lazy"><figcaption>Zero-LLM diagnostics</figcaption></figure><figure class="slide"><img src="../assets/img/wave-chat.webp" alt="Chat panel with starter actions" width="1100" height="1671" loading="lazy"><figcaption>Chat panel — every starter is a multi-agent workflow</figcaption></figure><figure class="slide"><img src="../assets/img/wave-setup.webp" alt="Setup screen offering a local offline model" width="1800" height="1288" loading="lazy"><figcaption>Offline mode: one 1.9 GB download, no API key</figcaption></figure><figure class="slide"><img src="../assets/img/wave-marketplace.webp" alt="Wave Engine on the VS Code Marketplace" width="1800" height="1521" loading="lazy"><figcaption>Live on the VS Code Marketplace</figcaption></figure></div></div></div>
+  <section class="block prose" id="the-problem"><h2><span class="n">01</span>The problem</h2><p>AI coding assistants usually send your code to a large cloud model and hope it guesses correctly. When the model can’t see how your project fits together, it invents file paths and APIs — and you get a confident answer with no evidence behind it.</p><ul class="bullets"><li><b>Context gap:</b> generic assistants miss project structure, entry points, dependencies and prior decisions.</li><li><b>Trust gap:</b> answers rarely point to real files and line numbers, and nothing checks them before you see them.</li><li><b>Privacy and cost:</b> the code leaves the machine, and every token is billed.</li></ul><div class="note"><b>My constraints</b>It had to run on an ordinary 8 GB laptop, work offline, and cost nothing to use.</div></section><section class="block prose" id="what-i-built"><h2><span class="n">02</span>What I built</h2><p>The idea is simple: <b>let deterministic agents gather the evidence, and let a small local model only explain what they found</b>. Every answer is critiqued and scored before it is shown.</p><div class="diagram-wrap wide" role="img" aria-label="Wave Engine architecture diagram. Editor column: VS Code extension, FastAPI backend, intent router, answer cache, grounded answer, optional cloud models. Answer path: orchestrator with blackboard and capability bidding, specialist agents, answer critic, swarm consensus of two to three Qwen chains, confidence scorer with a retry loop. Build path: agent council of five, execution loop, validated changes. All share a local llama.cpp runtime running Qwen2.5-Coder-3B.">
             <svg viewBox="0 0 960 580" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="wa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker>
@@ -163,115 +82,9 @@
               <path d="M250 528h68" class="d-edge-signal"/>
             </svg>
           </div>
-          <p class="diagram-cap">The answer path (centre) and build path (right) share one 4-bit model. Dashed teal lines are model calls; the orange loop is self-correction.</p>
-        </section>
-
-        <section id="answer">
-          <h2><span class="n">04 — Anatomy of an answer</span>What happens between “Enter” and the reply.</h2>
-          <ol>
-            <li><strong>Route.</strong> The intent router decides whether you're asking a question, requesting a change, or running a command. Anything that writes to disk is held for approval.</li>
-            <li><strong>Gather.</strong> The orchestrator posts the task to a shared blackboard. Agents <em>bid</em> for sub-tasks based on capability match, current load and track record, then run a staged pipeline: repo map → rule checks → memory lookup → hypothesis → causal analysis → deep read → architecture trace → tests.</li>
-            <li><strong>Critique first.</strong> Before any text is generated, an answer-critic agent lists what a correct answer <em>must</em> include. Those points are injected into the prompt.</li>
-            <li><strong>Reason in parallel.</strong> Two or three Qwen chains run with different evidence strategies; a confidence scorer picks the strongest.</li>
-            <li><strong>Check, then retry.</strong> The winner is re-scored on relevance, completeness, specificity and length. Below 0.55 it is regenerated with the critic's feedback.</li>
-            <li><strong>Remember.</strong> The result is cached and useful fix patterns are stored, ranked later with BM25, so the next similar question is faster and better.</li>
-          </ol>
-          <div class="callout"><span class="k">Why it matters</span><p>A 3B model on its own is not a reliable coder. A 3B model that only has to <em>explain evidence it was handed</em> — and is graded before it speaks — is surprisingly good. The intelligence lives in the system, not the weights.</p></div>
-        </section>
-
-        <section id="decisions">
-          <h2><span class="n">05 — Key decisions</span>The engineering that made a small model viable.</h2>
-          <div class="decisions">
-            <div class="decision"><span class="n">01</span><div><h4>Confidence-gated self-correction, calibrated for a small model</h4><p>Every answer is scored before it's shown. The retry threshold was re-tuned specifically for a 3B model (0.55) — strict enough to catch weak answers, loose enough not to loop forever on CPU.</p></div></div>
-            <div class="decision"><span class="n">02</span><div><h4>Latency: don't generate what you've already generated</h4><p>An answer cache keyed by SHA-256 of prompt + repo state, with fuzzy matching (Jaccard ≥ 0.82), skips generation entirely on repeats. A byte-identical system prefix lets parallel calls reuse the KV cache, and n-gram speculative decoding speeds up what's left — together taking most prompts from ~40s to ~5s.</p></div></div>
-            <div class="decision"><span class="n">03</span><div><h4>Fit the hardware you're given</h4><p>The runtime adapts to free RAM at launch — 32K context with 3 parallel slots, down to 8K with 1 — and quantises the KV cache to 8-bit. The same build runs on a developer workstation and a student laptop.</p></div></div>
-            <div class="decision"><span class="n">04</span><div><h4>A capability market, not a fixed pipeline</h4><p>Agents bid for work (capability match × load × reliability, max five bidders). Reliability is tracked over time, so agents that keep failing stop winning tasks.</p></div></div>
-            <div class="decision"><span class="n">05</span><div><h4>Constrained tool use</h4><p>Tool calls are forced through a GBNF grammar so a small model can't emit malformed JSON, and the loop stops if the same error hash appears twice or after 15 iterations — no infinite repair spirals.</p></div></div>
-            <div class="decision"><span class="n">06</span><div><h4>Safety by default</h4><p>Writes, shell commands and network access require approval (with workspace- and session-level grants). Path traversal is blocked, secrets are sanitised, attachments are parsed as data, and sessions are isolated — backed by a dedicated security test suite.</p></div></div>
-            <div class="decision"><span class="n">07</span><div><h4>Useful before any model is connected</h4><p>A zero-LLM analysis layer — 56 symbolic rules across Python, JS/TS and Go, dependency graphs for 6+ languages, pattern-based security checks — gives real diagnostics with no model at all.</p></div></div>
-          </div>
-        </section>
-
-        <section id="agents">
-          <h2><span class="n">06 — The 107 agents</span>Code, council and configuration.</h2>
-          <p>The agent roster is deliberately layered so it can grow without code changes:</p>
-          <table class="stack-table">
-            <tr><th>17 core agents</th><td>Python classes for the analysis pipeline — repo mapper, deep reader, architecture tracer, causal analyst, repair planner, test runner, answer critic and more.</td></tr>
-            <tr><th>5 council agents</th><td>Architect, CodeGen, Tester, Reviewer, Optimizer — run in rounds; code is approved only at consensus ≥ 0.7 with no critical issues.</td></tr>
-            <tr><th>85 declarative agents</th><td>Defined in Markdown/YAML and loaded at runtime — new specialists without touching the engine.</td></tr>
-          </table>
-          <p>They're organised into 14 families:</p>
-          <div class="chip-row"><span class="chip">security</span><span class="chip">testing</span><span class="chip">performance</span><span class="chip">infra</span><span class="chip">docs</span><span class="chip">release</span><span class="chip">data</span><span class="chip">observability</span><span class="chip">web research</span><span class="chip">code editing</span><span class="chip">repo reading</span><span class="chip">language</span><span class="chip">runtime</span><span class="chip">review</span></div>
-        </section>
-
-        <section id="results">
-          <h2><span class="n">08 — Results</span>Shipped, used and still improving.</h2>
-          <div class="before-after"><span class="lbl">Typical response time on CPU</span><span class="from">~40s</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">~5s</span></div>
-          <div class="before-after"><span class="lbl">Released versions on the VS Code Marketplace</span><span class="from">v0.0.9</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">v4.6</span></div>
-          <p>Wave Engine has been live on the Marketplace since March 2026 under the Fundamental Labs publisher, with 767 downloads, 30+ active users and 106 updates. Beyond coding, it grew a “Life OS” — morning briefings across calendar, email and GitHub, cross-repo search, a DevOps dashboard and a secret scanner — all running locally.</p>
-          <div class="carousel framed" data-carousel aria-label="Wave Engine screenshots">
-            <div class="carousel-track">
-              <figure class="slide"><img src="../assets/img/wave-chat.webp" alt="Wave Engine chat panel with starter actions: explain this codebase, debug top issues, build a feature, refactor a file, write tests, explain a file" loading="lazy" width="1100" height="1671" data-zoom><figcaption>The chat panel. Every starter maps to a multi-agent workflow.</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/wave-setup.webp" alt="Setup screen offering an external AI provider or an offline local Qwen2.5-Coder-3B model, with permission modes and system resource meters" loading="lazy" width="1800" height="1288" data-zoom><figcaption>Offline mode: one 1.9 GB download, then no API key and no per-token cost.</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/wave-diagnostics.webp" alt="Diagnostics view with health, issues, rules and agents counters and architecture metrics for coupling, cohesion, compliance and coverage" loading="lazy" width="1800" height="1248" data-zoom><figcaption>Diagnostics: zero-LLM symbolic analysis across Python, JS/TS and Go.</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/wave-marketplace.webp" alt="Wave Engine listing in the VS Code extension marketplace, version 4.6.0" loading="lazy" width="1800" height="1521" data-zoom><figcaption>The public Marketplace listing.</figcaption></figure>
-            </div>
-          </div>
-        </section>
-
-
-        <section id="features">
-          <h2><span class="n">07 — Feature inventory</span>Everything that ships in v4.6.</h2>
-          <div class="inventory">
-            <div><h4>Command Center</h4><p>A hub panel grouping every capability — Chat, Code, Life OS, Personal AI, DevOps, Operations — with a live status strip for the local model and backend.</p></div>
-            <div><h4>Zero-LLM analysis</h4><p>Dependency graphs for 6+ languages, 56 symbolic rules across Python, JS/TS and Go, and 14 pattern-based security detections — all without a model.</p></div>
-            <div><h4>Wave Builder</h4><p>Turns a prompt or an uploaded design into an app scaffold through a 12-stage generation pipeline with safe writes, command checks and quality gates.</p></div>
-            <div><h4>Deep context mode</h4><p>Up to 500K tokens of repository context for whole-codebase reasoning when a cloud model is connected.</p></div>
-            <div><h4>Life OS</h4><p>A morning briefing that pulls calendar, e-mail, GitHub and watchers into one view — locally.</p></div>
-            <div><h4>DevOps &amp; security</h4><p>A DevOps dashboard, cross-repo search, a secret scanner and encrypted session sync.</p></div>
-            <div><h4>Permissions</h4><p>Balanced and Trusted modes, with workspace- and session-level grants for file writes, terminal commands and network access.</p></div>
-            <div><h4>Surface area</h4><p>48 VS Code commands and 157 REST endpoints on the local FastAPI backend.</p></div>
-          </div>
-        </section>
-
-        <section id="next">
-          <h2><span class="n">09 — What's next</span>Where I'm taking it.</h2>
-          <ul>
-            <li><strong>Public benchmarks.</strong> Evaluate the self-correction loop against a SWE-bench-style suite and publish the numbers, not just latency.</li>
-            <li><strong>Brain-and-hands by default.</strong> A newer loop where Qwen plans and agents act behind deterministic patch and runtime gates is built and feature-flagged; it ships on once it beats the current path on evals.</li>
-            <li><strong>Hosted backend.</strong> An optional managed backend for teams that want onboarding in one click.</li>
-          </ul>
-        </section>
-      </div>
-    </div>
-  </article>
-  <div class="wrap">
-    <a class="next-proj" href="guardian.html">
-      <span class="k">Next case study</span>
-      <span class="t">Guardian<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-  </div>
-  <a class="to-top" href="#main" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+<p class="diagram-cap">The answer path (centre) and build path (right) share one 4-bit model. Dashed teal lines are model calls; the orange loop is self-correction.</p><h3>How an answer is produced</h3><ol><li><b>Route.</b> An intent router decides whether you’re asking a question, requesting a change or running a command. Anything that writes to disk waits for your approval.</li><li><b>Gather evidence.</b> The orchestrator posts the task to a shared blackboard; agents bid for sub-tasks based on capability, load and track record, then map the repo, read files, trace architecture and run tests.</li><li><b>Critique first.</b> Before any text is generated, a critic agent lists what a correct answer must include.</li><li><b>Reason in parallel.</b> Two or three reasoning chains run with different evidence strategies; a confidence scorer picks the best one.</li><li><b>Check, then retry.</b> The winner is re-scored on relevance, completeness and specificity. Below 0.55 it is regenerated with the critic’s feedback.</li><li><b>Remember.</b> The answer is cached and useful fix patterns are stored, so the next similar question is faster.</li></ol><h3>Key engineering decisions</h3><ul class="bullets"><li><b>Speed through caching, not hardware:</b> an answer cache keyed by prompt + repository state (with fuzzy matching), a byte-identical system prefix so parallel calls reuse the model’s KV cache, and speculative decoding. Most prompts went from ~40 s to ~5 s.</li><li><b>Fits the machine it runs on:</b> context length and parallel slots adapt to free RAM at launch (32K × 3 down to 8K × 1), with an 8-bit KV cache.</li><li><b>Safe tool use:</b> tool calls are forced through a grammar so a small model can’t emit broken JSON, and the loop stops if the same error repeats or after 15 iterations.</li><li><b>Code that is tested before you see it:</b> a five-agent council (Architect, CodeGen, Tester, Reviewer, Optimizer) must reach a consensus score of 0.7, then a generate → run → fix loop feeds real errors back to the model.</li><li><b>Useful with no model at all:</b> 56 symbolic rules across Python, JS/TS and Go, dependency graphs for 6+ languages and pattern-based security checks.</li><li><b>Extensible agents:</b> 17 core agents and 5 council agents in Python, plus 85 specialists defined in Markdown/YAML — new agents without touching the engine.</li></ul></section><section class="block prose" id="tech-stack"><h2><span class="n">03</span>Tech stack</h2><table class="stack"><tbody><tr><th>VS Code extension</th><td>TypeScript, VS Code API, webviews, SecretStorage — 48 commands</td></tr><tr><th>Backend</th><td>Python 3.12, FastAPI (157 local endpoints), Pydantic v2, SQLite, structlog</td></tr><tr><th>Model</th><td>Qwen2.5-Coder-3B, 4-bit Q4_K_M (1.9 GB), served locally by llama.cpp</td></tr><tr><th>Optional cloud models</th><td>Claude, GPT, Gemini, OpenRouter, DeepSeek</td></tr><tr><th>Quality</th><td>864 automated tests · ~108K lines of Python</td></tr></tbody></table></section><section class="block prose" id="impact"><h2><span class="n">04</span>Impact</h2><ul class="bullets"><li>Live on the <b>VS Code Marketplace</b> since March 2026: <b>767 downloads, 30+ active users and 106 releases</b>.</li><li>Typical response time cut from <b>~40 seconds to ~5 seconds</b> on CPU.</li><li>Works <b>fully offline</b> — your code never leaves your machine unless you choose a cloud model.</li><li>Grew beyond coding into a local “Life OS”: morning briefings across calendar, e-mail and GitHub, cross-repo search, a DevOps dashboard and a secret scanner.</li></ul></section><section class="block prose" id="what-i-learned"><h2><span class="n">05</span>What I learned</h2><ul class="bullets"><li>A small model is reliable when it only has to <b>explain evidence it was given</b> and is graded before it speaks — the intelligence lives in the system, not the weights.</li><li>Latency is mostly a caching problem. Avoid generating what you’ve already generated.</li><li>Next: publish benchmark results for the self-correction loop, and make the newer “brain-and-hands” planner the default once it beats the current path.</li></ul></section>
+  <a class="next" href="guardian.html"><span><small>Next</small><b>Guardian</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </main>
-
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <span>© 2026 Aditya Talekar · <a href="../index.html">Home</a> · <a href="mailto:aditya.a.talekar@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/aditya-talekar-48731532a/" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" data-resume>Résumé</a></span>
-    <span>Press <kbd><span data-mod>Ctrl</span> K</kbd> to jump anywhere</span>
-  </div>
-</footer>
-
-<div class="cmdk" role="dialog" aria-modal="true" aria-label="Command menu">
-  <div class="cmdk-panel">
-    <div class="cmdk-input">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="text" placeholder="Search pages, projects, actions…" aria-label="Search" role="combobox" aria-expanded="true" aria-controls="cmdk-list" autocomplete="off" spellcheck="false">
-    </div>
-    <ul class="cmdk-list" id="cmdk-list" role="listbox"></ul>
-    <div class="cmdk-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
-  </div>
-</div>
-<div class="toast" role="status" aria-live="polite"></div>
 <script src="../assets/js/site.js" defer></script>
 </body>
 </html>

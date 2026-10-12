@@ -1,137 +1,39 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agentic automation for a market-research firm — Aditya Talekar</title>
-  <meta name="description" content="Case study: seven coordinated agents, a zero-cost LLM layer across 10 providers, a citation-grounded data-quality pipeline and bot defence for Exactitude Consultancy.">
+  <title>Exactitude Consultancy — Aditya Talekar</title>
+  <meta name="description" content="As the sole engineer, I rebuilt the data, AI automation and infrastructure of a live market-research website with 30,000+ reports — on a near-zero API budget.">
   <meta name="author" content="Aditya Talekar">
   <link rel="canonical" href="https://adityatalekar.github.io/work/exactitude.html">
-  <meta name="theme-color" content="#f7f6f2">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Agentic automation for a market-research firm — Aditya Talekar">
-  <meta property="og:description" content="Case study: seven coordinated agents, a zero-cost LLM layer across 10 providers, a citation-grounded data-quality pipeline and bot defence for Exactitude Consultancy.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Exactitude Consultancy — Aditya Talekar">
+  <meta property="og:description" content="As the sole engineer, I rebuilt the data, AI automation and infrastructure of a live market-research website with 30,000+ reports — on a near-zero API budget.">
   <meta property="og:url" content="https://adityatalekar.github.io/work/exactitude.html">
   <meta property="og:image" content="https://adityatalekar.github.io/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,0..100;1,9..144,400..600,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body data-base="../">
 <a class="skip" href="#main">Skip to content</a>
-<div class="progress" aria-hidden="true"></div>
-
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="../index.html" aria-label="Aditya Talekar — home">
-      <span class="brand-mark" aria-hidden="true">A</span>
-      <span class="brand-name">Aditya Talekar <span>· AI Engineer</span></span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#education">Education</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#skills">Skills</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-    <div class="nav-tools">
-      <button class="cmdk-btn" data-cmdk aria-label="Open command menu">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span class="label">Search</span><kbd><span data-mod>Ctrl</span> K</kbd>
-      </button>
-      <button class="btn btn-primary btn-sm" data-resume>Résumé</button>
-      <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-  <div class="wrap"><a class="back-btn" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to all projects</a></div>
-  <article>
-    <header class="cs-hero">
-      <div class="wrap">
-        <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span aria-hidden="true">/</span><span>Exactitude Consultancy</span></nav>
-        <h1 class="cs-title">Agentic automation for a <em>research firm</em></h1>
-        <p class="cs-sub">Seven agents, ten LLM providers, no API bill — and a pipeline that refuses to publish a number it can't cite.</p>
-        <dl class="cs-facts">
-          <div><dt>Client</dt><dd><a href="https://exactitudeconsultancy.com/" target="_blank" rel="noopener">Exactitude Consultancy ↗</a><br><span class="muted">Market research, Pune · est. 2019</span></dd></div>
-          <div><dt>Role</dt><dd>Independent AI consultant — design, build, deploy</dd></div>
-          <div><dt>Timeline</dt><dd>2026<br>Freelance, remote</dd></div>
-          <div><dt>Stack</dt><dd>LangGraph · LangChain · Python · MySQL · PHP · GitHub Actions · Cloudflare</dd></div>
-        </dl>
-        <dl class="glance"><div><dt>Problem</dt><dd>Stale figures, manual content, no AI budget — and a small server under bot attack.</dd></div><div><dt>Solution</dt><dd>Seven agents with human approval, verification pipelines, a registry-backed directory, edge caching and defence.</dd></div><div><dt>Impact</dt><dd>22,000+ corrections · 909 → 1 ms · ~$0 AI spend · outreach 10×.</dd></div><div><dt>My role</dt><dd>Independent consultant and sole engineer for data, AI and infrastructure.</dd></div></dl>
-        <div class="hero-cta" style="margin-top:28px"><a class="btn btn-primary" href="exactitude-deep-dive.html">Read the full deep dive <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://exactitudeconsultancy.com/" target="_blank" rel="noopener">Visit the live site ↗</a></div>
-        <figure class="cs-cover"><img src="../assets/img/exa-home.webp" alt="The rebuilt Exactitude Consultancy homepage: 'Independent research. Data your board can trust.' with search across 30,000+ reports" width="1800" height="982" data-zoom></figure>
-      </div>
-    </header>
-
-    <div class="wrap cs-body">
-      <aside class="toc" aria-label="On this page">
-        <p>On this page</p>
-        <ol>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#brief">The brief</a></li>
-          <li><a href="#website">The website</a></li>
-          <li><a href="#architecture">Architecture</a></li>
-          <li><a href="#gateway">The $0 LLM layer</a></li>
-          <li><a href="#quality">Data quality</a></li>
-          <li><a href="#index">Company index</a></li>
-          <li><a href="#defence">Bot defence</a></li>
-          <li><a href="#learned">What I learned</a></li>
-          <li><a href="exactitude-deep-dive.html">Deep dive →</a></li>
-        </ol>
-      </aside>
-
-      <div class="prose">
-        <section id="overview">
-          <h2><span class="n">01 — Overview</span>Automation the client could trust.</h2>
-          <p>Exactitude publishes tens of thousands of market-research reports. Content, prospecting and data checks were manual, AI-written statistics were drifting from reality, and the website was being hammered by scrapers on a small server. I delivered a revamped website and an autonomous system of <strong>seven coordinated agents</strong> — with a human approval step before anything goes public.</p>
-          <div class="stat-grid">
-            <div class="stat accent"><b>10×</b><span>client outreach, from 100 to 1,000</span></div>
-            <div class="stat"><b>10h→1h</b><span>manual customer search per cycle</span></div>
-            <div class="stat"><b>~$0</b><span>AI/data spend, down from an est. $24–36k</span></div>
-            <div class="stat"><b>39%→0%</b><span>chart-data mismatches (verified sample)</span></div>
-            <div class="stat"><b>168</b><span>reports with wrong market sizes corrected</span></div>
-            <div class="stat"><b>1.35M</b><span>threat-flagged requests blocked in 48h</span></div>
-          </div>
-          <a class="deep-cta" href="exactitude-deep-dive.html">
-            <span class="deep-cta-k">Technical deep dive · 8 case studies · ~12 min read</span>
-            <span class="deep-cta-t">Read more about this project in depth <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-            <span class="deep-cta-stats"><span><b>22,000+</b> market figures corrected</span><span><b>909→1 ms</b> page loads</span><span><b>103,736</b> companies from official registers</span><span><b>42</b> admin tests</span></span>
-          </a>
-        </section>
-
-        <section id="brief">
-          <h2><span class="n">02 — The brief</span>Four problems, one small budget.</h2>
-          <div class="decisions">
-            <div class="decision"><span class="n">01</span><div><h4>Content didn't scale</h4><p>Blog posts, press releases, LinkedIn updates and outreach emails were written by hand, one report at a time.</p></div></div>
-            <div class="decision"><span class="n">02</span><div><h4>Prospecting was manual</h4><p>Finding the right companies for each report took around 10 hours per cycle.</p></div></div>
-            <div class="decision"><span class="n">03</span><div><h4>Numbers couldn't be trusted</h4><p>Generated summaries contained hallucinated statistics, and some reports' charts disagreed with their own market-size figures.</p></div></div>
-            <div class="decision"><span class="n">04</span><div><h4>No budget for AI</h4><p>The firm couldn't justify a five-figure annual LLM bill — and the production server was a small box under active bot attack.</p></div></div>
-          </div>
-        </section>
-
-        <section id="website">
-          <h2><span class="n">03 — The website</span>A research store built to be trusted.</h2>
-          <p>I rebuilt <a href="https://exactitudeconsultancy.com/" target="_blank" rel="noopener">exactitudeconsultancy.com</a> around what buyers of research actually do: search, compare, and check the numbers before they cite them. The PHP site now fronts <strong>30,000+ reports</strong> and a directory of <strong>100,000+ company profiles</strong>, and every page is fed by the pipelines below.</p>
-          <div class="carousel framed" data-carousel aria-label="Exactitude Consultancy screenshots">
-            <div class="carousel-track">
-              <figure class="slide"><img src="../assets/img/exa-report.webp" alt="Sodium-ion Battery Market report page with headline market size, forecast and CAGR, sample download and cite-this-report" loading="lazy" width="1800" height="987" data-zoom><figcaption>Report page — headline size, forecast and CAGR come from the verified figures, with “cite this report” built in.</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/exa-snapshot.webp" alt="Market snapshot panel: market size 2026 and 2035, CAGR, largest and fastest-growing region, concentration, a bar chart and the major players covered" loading="lazy" width="1800" height="977" data-zoom><figcaption>Market snapshot — the chart and the text now agree, because they're generated from the same checked numbers.</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/exa-companies.webp" alt="Company intelligence section: search across 103,776 companies with cards for BASF, Medtronic, Siemens, ABB, Microsoft, Bosch, Cargill and Cook Medical" loading="lazy" width="1800" height="973" data-zoom><figcaption>Company intelligence — 100,000+ profiles from official registers, linked to reports by the matching pipeline.</figcaption></figure>
-              <figure class="slide"><img src="../assets/img/exa-home.webp" alt="Homepage hero with report search and popular industries with report counts" loading="lazy" width="1800" height="982" data-zoom><figcaption>Homepage — search-first, with live report counts per industry.</figcaption></figure>
-            </div>
-          </div>
-        </section>
-
-        <section id="architecture">
-          <h2><span class="n">04 — Architecture</span>Agents draft. Pipelines verify. People approve.</h2>
-          <div class="diagram-wrap wide" role="img" aria-label="Architecture: report catalogue and public registries feed a LangGraph agent layer through an LLM gateway with ten providers, thirty-three rotated keys and automatic failover, running on GitHub Actions. Agents cover research, blog and press, LinkedIn, email outreach, citation-grounded QA and enrichment and matching. Drafts go to a human approval queue, then to the website, LinkedIn and email.">
+<header class="topbar"><div class="in">
+  <a class="back" href="../index.html#experience"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to portfolio</a>
+  <span class="who">Aditya Talekar · AI Engineer</span>
+  <button class="btn btn-primary" data-doc="resume" style="height:36px">Résumé</button>
+</div></header>
+<main class="page" id="main">
+  <div class="page-kind">Experience</div>
+  <h1>Exactitude Consultancy</h1>
+  <p class="page-sub">As the sole engineer, I rebuilt the data, AI automation and infrastructure of a live market-research website with 30,000+ reports — on a near-zero API budget.</p>
+  <dl class="facts"><div><dt>Role</dt><dd>Independent AI Consultant — sole engineer for data, AI &amp; infrastructure</dd></div><div><dt>Timeline</dt><dd>May – Jun 2026 · remote</dd></div><div><dt>Stack</dt><dd>Python · LangGraph · PHP 8 · MySQL 8 · Cloudflare · GitHub Actions</dd></div><div><dt>Links</dt><dd><a href="https://exactitudeconsultancy.com/" target="_blank" rel="noopener">exactitudeconsultancy.com ↗</a></dd></div></dl>
+  <div class="results"><div class="result"><b>22,000+</b><span>market figures corrected and traced to sources</span></div><div class="result"><b>909 → 1 ms</b><span>homepage response time</span></div><div class="result"><b>~$0</b><span>AI / data spend, down from an est. $24–36k</span></div><div class="result"><b>1.35M</b><span>malicious requests blocked in 48 hours</span></div></div>
+  <nav class="jump" aria-label="On this page"><a href="#screens">Screenshots</a><a href="#the-situation">The situation</a><a href="#what-i-did">What I did</a><a href="#tech-stack">Tech stack</a><a href="#impact">Impact</a><a href="#what-i-learned">What I learned</a></nav>
+  <div class="block" id="screens"><h2>Screenshots</h2><div class="carousel" aria-label="Screenshots"><div class="carousel-track"><figure class="slide"><img src="../assets/img/exa-home.webp" alt="Exactitude homepage with report search" width="1800" height="982" loading="lazy"><figcaption>Homepage — search across 30,000+ reports</figcaption></figure><figure class="slide"><img src="../assets/img/exa-report.webp" alt="Report page with verified headline figures" width="1800" height="987" loading="lazy"><figcaption>Report page with verified figures and “cite this report”</figcaption></figure><figure class="slide"><img src="../assets/img/exa-snapshot.webp" alt="Market snapshot panel" width="1800" height="977" loading="lazy"><figcaption>Market snapshot — chart and text now agree</figcaption></figure><figure class="slide"><img src="../assets/img/exa-companies.webp" alt="Company directory" width="1800" height="973" loading="lazy"><figcaption>Company directory built from official registers</figcaption></figure></div></div></div>
+  <section class="block prose" id="the-situation"><h2><span class="n">01</span>The situation</h2><p>Exactitude Consultancy publishes around 30,000 industry reports. When I joined, four problems were hurting the business at once — and there was no budget for paid APIs.</p><ul class="bullets"><li><b>Untrustworthy numbers:</b> stale or inconsistent figures, wrong units, impossible growth rates and placeholder company lists.</li><li><b>Slow pages:</b> the homepage took almost a second to load.</li><li><b>Lost leads:</b> enquiry e-mails had been failing silently for a month.</li><li><b>Manual everything:</b> content, outreach and customer search were done by hand — on a small server under bot attack.</li></ul></section><section class="block prose" id="what-i-did"><h2><span class="n">02</span>What I did</h2><p>One principle ran through everything: <b>Python does the work, AI only makes judgement calls, and a human approves anything that goes public</b>. Every bulk change is backed up, checked on the live page and rolled back automatically if anything breaks.</p><div class="diagram-wrap wide" role="img" aria-label="Architecture: report catalogue and public registries feed a LangGraph agent layer through an LLM gateway with ten providers, thirty-three rotated keys and automatic failover, running on GitHub Actions. Agents cover research, blog and press, LinkedIn, email outreach, citation-grounded QA and enrichment and matching. Drafts go to a human approval queue, then to the website, LinkedIn and email.">
             <svg viewBox="0 0 960 470" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <marker id="ea" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker>
@@ -165,104 +67,32 @@
               <path d="M710 363H735V320H758M735 370H758M735 363V420H758" class="d-edge" marker-end="url(#ea)"/>
             </svg>
           </div>
-          <p class="diagram-cap">Agents only ever create drafts. A dedicated database user can write to the draft tables and the blog/press tables — nothing else — so a misbehaving agent can't touch payments or accounts.</p>
-          <p>Each agent is a LangGraph node with its own tools and prompt; the graph handles retries, branching and hand-offs. Drafts carry their source report ID and metadata, so a reviewer always sees <em>why</em> something was written before clicking approve. Rejecting a draft deletes it; approving one publishes it into the site's existing blog and press-release tables, so the CMS didn't need to change.</p>
-        </section>
-
-        <section id="gateway">
-          <h2><span class="n">05 — The $0 LLM layer</span>Ten providers, thirty-three keys, one interface.</h2>
-          <p>Commercial API pricing for this volume of drafting, enrichment and verification was estimated at <strong>$24,000–36,000 a year</strong>. Instead, I built a gateway that load-balances across ten free-tier providers — including Gemini, Groq, NVIDIA NIM and Mistral — and rotates 33 API keys.</p>
-          <ul>
-            <li><strong>Failover, not fallback.</strong> When a provider rate-limits or errors, the call moves to the next healthy provider transparently; agents never see the difference.</li>
-            <li><strong>Key rotation.</strong> Keys are spread across providers and cycled so no single key hits its quota.</li>
-            <li><strong>Free compute.</strong> Everything runs on GitHub Actions: jobs are split into 8, 12, 20 or 40-way matrices, each shard has a time budget and writes atomic checkpoints, and a crashed shard resumes exactly where it stopped.</li>
-          </ul>
-          <div class="before-after"><span class="lbl">Estimated annual AI / data spend</span><span class="from">$24–36k</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">≈ $0</span></div>
-        </section>
-
-        <section id="quality">
-          <h2><span class="n">06 — Data quality</span>Citation-grounded, or it doesn't ship.</h2>
-          <p>The most valuable fix wasn't generation — it was verification. I built a pipeline in Python and MySQL that forces every market-size statistic to be grounded in a citable source:</p>
-          <ol>
-            <li>Harvest published market-size and CAGR sentences from 23 research firms' public pages.</li>
-            <li>For each report, compare its stated figure and its chart data against the published range.</li>
-            <li>Flag reports whose numbers fall outside the range, or whose charts contradict their own text.</li>
-            <li>Regenerate with the citations in the prompt, then re-verify before the report is updated.</li>
-          </ol>
-          <div class="before-after"><span class="lbl">Chart-data mismatches, verified sample</span><span class="from">39%</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="to">0%</span></div>
-          <p>168 reports with wrong market-size figures were corrected.</p>
-        </section>
-
-        <section id="index">
-          <h2><span class="n">07 — Company index</span>1.43 million companies on a free runner.</h2>
-          <p>To match reports to the companies that actually operate in each market — the basis for prospecting and outreach — I built an open company index from Wikidata (CC0) and openFDA, enriched with GLEIF LEI records, and embedded with <code>bge-small-en-v1.5</code>.</p>
-          <div class="stat-grid">
-            <div class="stat accent"><b>1.43M</b><span>company profiles embedded</span></div>
-            <div class="stat"><b>4,105</b><span>company websites verified live</span></div>
-            <div class="stat"><b>1,382</b><span>wrong links caught and rejected</span></div>
+<p class="diagram-cap">Agents only ever create drafts. A dedicated database user can write to the draft tables and the blog/press tables — nothing else — so a misbehaving agent can't touch payments or accounts.</p><h3>1. Verified market data at scale</h3><ul class="bullets"><li>Crawled ~1 million report pages from research firms’ public sitemaps — no paid search API.</li><li>Matched markets strictly (“spine surgery robots” is not “spine surgery”), extracted figures with regular expressions and converted everything to US dollars, catching million/billion mix-ups.</li><li>Dropped any figure more than 5× away from the median of other sources as a likely typo; AI was used for only ~5% of decisions, and two models had to agree.</li><li>Logged every change with its source URLs so any batch can be rolled back. <b>22,000+ corrections went live</b>; 48.9% of reports are now cross-checked within ±25% of published research.</li></ul><div class="diagram-wrap wide" role="img" aria-label="Pipeline: Python crawls about one million report pages from research-firm sitemaps, matches them to reports by exact market and region, extracts figures with regular expressions, normalises them to US dollars and computes a consensus. AI handles only ambiguous judgement calls; two models must agree and a third checks random samples. Python then applies changes safely with backup, write, render check and automatic rollback, recording every change in a ledger with source URLs.">
+            <svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="xa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker>
+                <marker id="xaa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" class="d-arrow-accent"/></marker>
+              </defs>
+              <text x="32" y="30" class="d-label">python · deterministic work</text>
+              <rect x="32" y="44" width="168" height="62" rx="12" class="d-box"/><text x="48" y="70" class="d-title">Crawl sitemaps</text><text x="48" y="90" class="d-text">~1M report pages</text>
+              <rect x="214" y="44" width="168" height="62" rx="12" class="d-box"/><text x="230" y="70" class="d-title">Match markets</text><text x="230" y="90" class="d-text">exact name + region</text>
+              <rect x="396" y="44" width="168" height="62" rx="12" class="d-box"/><text x="412" y="70" class="d-title">Extract figures</text><text x="412" y="90" class="d-text">regex, not an LLM</text>
+              <rect x="578" y="44" width="168" height="62" rx="12" class="d-box"/><text x="594" y="70" class="d-title">Normalise</text><text x="594" y="90" class="d-text">USD · M/B mix-ups</text>
+              <rect x="760" y="44" width="168" height="62" rx="12" class="d-box"/><text x="776" y="70" class="d-title">Consensus</text><text x="776" y="90" class="d-text">drop &gt;5× outliers</text>
+              <path d="M200 75h12M382 75h12M564 75h12M746 75h12" class="d-edge" marker-end="url(#xa)"/>
+              <path d="M844 106V150H212V196" class="d-edge-accent d-flow" marker-end="url(#xaa)"/>
+              <text x="32" y="188" class="d-label">ai · judgement only</text>
+              <text x="488" y="188" class="d-label">safe apply</text>
+              <rect x="32" y="200" width="200" height="62" rx="12" class="d-box-accent"/><text x="48" y="226" class="d-title">AI judgement</text><text x="48" y="246" class="d-text">only ambiguous cases</text>
+              <rect x="250" y="200" width="220" height="62" rx="12" class="d-box-signal"/><text x="266" y="226" class="d-title">Two models agree</text><text x="266" y="246" class="d-text">+ a third samples batches</text>
+              <rect x="488" y="200" width="270" height="62" rx="12" class="d-box"/><text x="504" y="226" class="d-title">Backup → write → check</text><text x="504" y="246" class="d-text">render check · auto-rollback</text>
+              <rect x="776" y="200" width="152" height="62" rx="12" class="d-box-sunk"/><text x="792" y="226" class="d-title">Ledger</text><text x="792" y="246" class="d-text">source URLs</text>
+              <path d="M232 231h16M470 231h16M758 231h16" class="d-edge" marker-end="url(#xa)"/>
+            </svg>
           </div>
-          <h3>Matching</h3>
-          <p>For each report the matcher pools candidates from four lanes — current companies, semantic neighbours of “makers and suppliers of &lt;market&gt;”, product-phrase hits and FDA ingredient/device registrations — and keeps the top 70 by trust tier. A web-search lane only adds a company if it resolves to a real entry in the index.</p>
-          <h3>“A wrong link is worse than no link”</h3>
-          <p>Naive matching linked Roche to a small French domain, Johnson &amp; Johnson to its Italian subsidiary and Kellogg to a city website. The fix: drop entities that have a parent organisation, rank by Wikipedia sitelinks, require the host to plausibly match the company name, accept country domains only on exact matches, and verify every URL live. Rejection is the default.</p>
-          <h3>Fitting in 7 GB</h3>
-          <p>The first version ran out of memory on GitHub's 7 GB runners. The rewrite keeps only byte offsets in memory, reads profiles from disk on demand and searches embeddings block by block — 1.4M profiles, no paid infrastructure.</p>
-        </section>
-
-        <section id="defence">
-          <h2><span class="n">08 — Bot defence</span>Keeping a 2-core server alive.</h2>
-          <p>The site was being scraped hard by AI crawlers and probed by automated scanners. I wrote custom Cloudflare WAF rules, rate limits and timeouts tuned to the site's real traffic patterns.</p>
-          <div class="stat-grid">
-            <div class="stat"><b>17.6M</b><span>requests in 48 hours</span></div>
-            <div class="stat accent"><b>1.35M</b><span>threat-flagged and blocked (8%)</span></div>
-            <div class="stat"><b>~28K</b><span>malicious requests stopped per hour, on average</span></div>
-          </div>
-          <p>The rebuilt PHP site deploys through GitHub Actions — rsync over SSH, a syntax check, then a web-server reload — with all secrets moved out of the codebase into environment files.</p>
-        </section>
-
-        <section id="learned">
-          <h2><span class="n">09 — What I learned</span>The unglamorous parts are the product.</h2>
-          <ul>
-            <li><strong>Verification beats generation.</strong> The client cared less about how much the agents wrote than whether a single number was wrong.</li>
-            <li><strong>Least privilege makes autonomy acceptable.</strong> A database user that physically can't touch payments did more for the client's trust than any prompt.</li>
-            <li><strong>Free tiers are infrastructure if you engineer for failure.</strong> Checkpoints, failover and budgets turned rate limits from outages into non-events.</li>
-          </ul>
-          <a class="deep-cta" href="exactitude-deep-dive.html">
-            <span class="deep-cta-k">Technical deep dive · 8 case studies · ~12 min read</span>
-            <span class="deep-cta-t">Read more about this project in depth <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-            <span class="deep-cta-stats"><span><b>22,000+</b> market figures corrected</span><span><b>909→1 ms</b> page loads</span><span><b>103,736</b> companies from official registers</span><span><b>42</b> admin tests</span></span>
-          </a>
-        </section>
-      </div>
-    </div>
-  </article>
-  <div class="wrap">
-    <a class="next-proj" href="nexusrag.html">
-      <span class="k">Next case study</span>
-      <span class="t">NexusRAG<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-    </a>
-  </div>
-  <a class="to-top" href="#main" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+<p class="diagram-cap">Python handles the bulk of decisions; AI is reserved for judgement calls, and never gets the final word alone.</p><h3>2. A company directory from official registers</h3><ul class="bullets"><li>Built a <b>103,736-company directory</b> from openFDA, GLEIF, Wikidata and NIH PubChem.</li><li>An AI-suggested company is kept only if its source page names both the company and the product — Python checks the page.</li><li>Removed <b>3,845 wrong-industry companies</b>, each confirmed by two AI models and the company’s own website; generated 50,840 company profiles from SQL templates instead of days of LLM calls.</li></ul><h3>3. Seven agents with a human in charge</h3><ul class="bullets"><li>Seven coordinated agents (LangChain, LangGraph) for research, blog and press drafting, LinkedIn, segmented e-mail, prospecting, enrichment and quality checks.</li><li>A weekly content pipeline — signals → topics → verified fact sheets → drafts — runs in about <b>6.5 minutes</b>.</li><li>Nothing publishes without approval in the admin panel; agents write through a database user that cannot touch payments or accounts.</li></ul><h3>4. Pages from 909 ms to 1 ms</h3><ul class="bullets"><li>Found that the page cache had never worked: PHP session headers on every page told Apache not to cache.</li><li>Removed sessions from public pages, configured Apache’s disk cache and sent proper headers so Cloudflare could cache at the edge — <b>homepage 909 → 1 ms, report pages 243 → 4 ms</b>.</li></ul><h3>5. The month enquiry e-mails went silent</h3><ul class="bullets"><li>About 70 enquiries were saved but never notified: the mail code called the site’s own public URL, which Cloudflare’s bot protection blocked.</li><li>Switched to authenticated SMTP with delivery logs, confirmation e-mails, request IDs, a “track your request” page and an e-mail validity check.</li></ul><h3>6. Bot defence</h3><ul class="bullets"><li>Custom Cloudflare WAF rules, user-agent blocks, rate limits and timeouts against AI scrapers and vulnerability scanners.</li><li><b>1.35M of 17.6M requests (8%)</b> threat-flagged and blocked at the edge in 48 hours, protecting a 2-core origin server.</li></ul><h3>7. A $0 AI and search layer</h3><ul class="bullets"><li>Load-balanced 10 free-tier LLM providers (including Gemini, Groq, NVIDIA NIM and Mistral) with 33 rotating keys and automatic failover.</li><li>Ran crawling and search on up to 12 parallel GitHub Actions runners with time budgets and resumable checkpoints — 1,057 reports searched in ~15 minutes instead of 4+ hours.</li></ul><h3>8. Admin access control</h3><ul class="bullets"><li>Roles across 13 sections (none / view / edit), bcrypt passwords, an audit log and a guard that fails closed — covered by 42 automated tests.</li></ul></section><section class="block prose" id="tech-stack"><h2><span class="n">03</span>Tech stack</h2><table class="stack"><tbody><tr><th>Backend</th><td>PHP 8, Apache 2.4 (mod_cache), MySQL 8</td></tr><tr><th>Pipelines</th><td>Python 3 — regex extraction, concurrent workers, paramiko deploys; LangChain, LangGraph</td></tr><tr><th>Compute</th><td>GitHub Actions as a free fleet of up to 12 parallel workers</td></tr><tr><th>AI models</th><td>Claude Haiku and Sonnet for cited research; Groq, NVIDIA Nemotron and Gemini free tiers for second opinions</td></tr><tr><th>Data sources</th><td>openFDA, GLEIF, Wikidata, NIH PubChem, SEC EDGAR, Google Search Console</td></tr><tr><th>Edge &amp; tooling</th><td>Cloudflare (CDN, WAF, caching), headless Chrome for page checks, PHPMailer, schema.org JSON-LD, IndexNow</td></tr></tbody></table></section><section class="block prose" id="impact"><h2><span class="n">04</span>Impact</h2><ul class="bullets"><li><b>Trust:</b> 22,000+ figures corrected; chart-data mismatches on a verified sample fell from <b>39% to 0%</b>; 168 reports with wrong headline figures fixed.</li><li><b>Speed:</b> homepage <b>909 ms → 1 ms</b>, report pages 243 ms → 4 ms — same server, no new hardware.</li><li><b>Revenue:</b> a month of lost enquiries recovered and the failure made impossible to repeat.</li><li><b>Reach:</b> client outreach scaled <b>10× (100 → 1,000)</b>; manual customer search cut from ~10 hours to ~1.</li><li><b>Cost:</b> AI / data spend from an estimated <b>$24–36k a year to ~$0</b>.</li></ul></section><section class="block prose" id="what-i-learned"><h2><span class="n">05</span>What I learned</h2><ul class="bullets"><li>Make AI cite its evidence, then check it in code. Trust comes from verification, not from the model.</li><li>Use deterministic code first and AI last — it’s cheaper, faster and auditable.</li><li>On a live site, every bulk change needs a backup, a render check and a one-command rollback.</li><li>Measure before optimising: the 900 ms problem was one configuration detail.</li></ul></section>
+  <a class="next" href="talekar-infra.html"><span><small>Next</small><b>Project Engineer, Talekar Infra</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </main>
-
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <span>© 2026 Aditya Talekar · <a href="../index.html">Home</a> · <a href="mailto:aditya.a.talekar@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/aditya-talekar-48731532a/" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" data-resume>Résumé</a></span>
-    <span>Press <kbd><span data-mod>Ctrl</span> K</kbd> to jump anywhere</span>
-  </div>
-</footer>
-
-<div class="cmdk" role="dialog" aria-modal="true" aria-label="Command menu">
-  <div class="cmdk-panel">
-    <div class="cmdk-input">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="text" placeholder="Search pages, projects, actions…" aria-label="Search" role="combobox" aria-expanded="true" aria-controls="cmdk-list" autocomplete="off" spellcheck="false">
-    </div>
-    <ul class="cmdk-list" id="cmdk-list" role="listbox"></ul>
-    <div class="cmdk-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
-  </div>
-</div>
-<div class="toast" role="status" aria-live="polite"></div>
 <script src="../assets/js/site.js" defer></script>
 </body>
 </html>
