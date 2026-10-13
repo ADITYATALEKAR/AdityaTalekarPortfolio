@@ -1,4 +1,4 @@
-# adityatalekar.github.io
+# Aditya Talekar — Portfolio
 
 Personal portfolio of Aditya Talekar — AI Engineer (Agentic AI & MLOps).
 
